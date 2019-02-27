@@ -2,211 +2,232 @@
 {% load staticfiles %}
 {% block aboutus %}
 
-	<style>
-		.dropdown-menu li, .dropdown-menu li a {
-			float: right;
-			white-space: normal;
-			width: 100%;
-			height: auto;
-			word-wrap: break-word;
-			background-color: #F77C2D;
-		}
-		.dropdown-submenu {
-			position: relative;
-		}
-		.dropdown-submenu .dropdown-menu {
-			top: 0;
-			left: 100%;
-			margin-top: -1px;
-		}
 
-		.dropdown-submenu>.dropdown-menu {
-		    top: 0;
-		    left: 100%;
-		    margin-top: -6px;
-		    margin-left: -1px;
-		    -webkit-border-radius: 0 6px 6px 6px;
-		    -moz-border-radius: 0 6px 6px;
-		    border-radius: 0 6px 6px 6px;
-		}
+<style>
+                                .dropdown-menu li, .dropdown-menu li a {
+                                                float: right;
+                                                white-space: normal;
+                                                width: 100%;
+                                                height: auto;
+                                                word-wrap: break-word;
+                                                background-color: #F77C2D;
+                                }
+                                .dropdown-submenu {
+                                                position: relative;
+                                }
+                                .dropdown-submenu .dropdown-menu {
+                                                top: 0;
+                                                left: 100%;
+                                                margin-top: -1px;
+                                }
 
-		.dropdown-submenu:hover>.dropdown-menu {
-		    display: block;
-		}
-	.dropdown-submenu:hover>a:after {
-		    border-left-color: #fff;
-		}
+                                .dropdown-submenu>.dropdown-menu {
+                                    top: 0;
+                                    left: 100%;
+                                    margin-top: -6px;
+                                    margin-left: -1px;
+                                    -webkit-border-radius: 0 6px 6px 6px;
+                                    -moz-border-radius: 0 6px 6px;
+                                    border-radius: 0 6px 6px 6px;
+                                }
 
-		.dropdown-submenu.pull-left {
-		    float: none;
-		}
+                                .dropdown-submenu:hover>.dropdown-menu {
+                                    display: block;
+                                }
+                .dropdown-submenu:hover>a:after {
+                                    border-left-color: #fff;
+                                }
 
-		.dropdown-submenu.pull-left>.dropdown-menu {
-		    left: -100%;
-		    margin-left: 10px;
-		    -webkit-border-radius: 6px 0 6px 6px;
-		    -moz-border-radius: 6px 0 6px 6px;
-		    border-radius: 6px 0 6px 6px;
-		}
+                                .dropdown-submenu.pull-left {
+                                    float: none;
+                                }
 
-
-
-		.image-hover:hover{
-			transform: translateY(-10px);
-		}
-
-		.image_position{
-			height:100px;
-			padding-left:50px
-		}
-		.image_content{
-			font-weight:Bold;
-			font-size:14px;
-			width:100%
-		}
-		.read_more{
-			font-weight:Bold;
-			cursor:pointer
-		}
-		.required_field::before{
-			content: "*";
-			color: red;
-		}
-		.item-1,
-		.item-2,
-		.item-3 {
-			position: absolute;
-			display: block;
-			width: 75%;
-			font-size: 25px;
-			animation-duration: 20s;
-			animation-timing-function: ease-in-out;
-			animation-iteration-count: infinite;
-		}
-
-		.item-1{
-			animation-name: anim-1;
-		}
-
-		.item-2{
-			animation-name: anim-2;
-		}
-
-		.item-3{
-			animation-name: anim-3;
-		}
-
-		@keyframes anim-1 {
-			0%, 8.3% { left: 30%; opacity: 0; }
-			8.3%,25% { left: 10%; opacity: 1; }
-			33.33%, 100% { left: 20%; opacity: 0; }
-		}
-
-		@keyframes anim-2 {
-			0%, 33.33% { left: 30%; opacity: 0; }
-			41.63%, 58.29% { left: 10%; opacity: 1; }
-			66.66%, 100% { left: 20%; opacity: 0; }
-		}
-
-		@keyframes anim-3 {
-			0%, 66.66% { left: 30%; opacity: 0; }
-			74.96%, 91.62% { left: 10%; opacity: 1; }
-			100% { left: 20%; opacity: 0; }
-		}
-		@media only screen and (max-width: 600px) {
-  			.item-1,.item-2,.item-3 {
-				padding-top: 1em;
-				font-size: 20px;
-			}
-			.style-font{
-				font-size:20px;
-			}
-			.style-font1{
-				font-size:30px;
-			}
-			.mobile-break { display: block; }
-			.mobile-padding { padding-bottom: 20px; }
-		}
-		.centered {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-		}
+                                .dropdown-submenu.pull-left>.dropdown-menu {
+                                    left: -100%;
+                                    margin-left: 10px;
+                                    -webkit-border-radius: 6px 0 6px 6px;
+                                    -moz-border-radius: 6px 0 6px 6px;
+                                    border-radius: 6px 0 6px 6px;
+                                }
 
 
-	</style>
+
+                                .image-hover:hover{
+                                                transform: translateY(-10px);
+                                }
+
+                                .image_position{
+                                                height:100px;
+                                                padding-left:50px
+                                }
+                                .image_content{
+                                                font-weight:Bold;
+                                                font-size:14px;
+                                                width:100%
+                                }
+                                .read_more{
+                                                font-weight:Bold;
+                                                cursor:pointer
+                                }
+                                .required_field::before{
+                                                content: "*";
+                                                color: red;
+                                }
+                                .item-1,
+                                .item-2,
+                                .item-3 {
+                                                position: absolute;
+                                                display: block;
+                                                width: 75%;
+                                                font-size: 25px;
+                                                animation-duration: 20s;
+                                                animation-timing-function: ease-in-out;
+                                                animation-iteration-count: infinite;
+                                }
+
+                                .item-1{
+                                                animation-name: anim-1;
+                                }
+
+                                .item-2{
+                                                animation-name: anim-2;
+                                }
+
+                                .item-3{
+                                                animation-name: anim-3;
+                                }
+
+                                @keyframes anim-1 {
+                                                0%, 8.3% { left: 30%; opacity: 0; }
+                                                8.3%,25% { left: 10%; opacity: 1; }
+                                                33.33%, 100% { left: 20%; opacity: 0; }
+                                }
+
+                                @keyframes anim-2 {
+                                                0%, 33.33% { left: 30%; opacity: 0; }
+                                                41.63%, 58.29% { left: 10%; opacity: 1; }
+                                                66.66%, 100% { left: 20%; opacity: 0; }
+                                }
+
+                                @keyframes anim-3 {
+                                                0%, 66.66% { left: 30%; opacity: 0; }
+                                                74.96%, 91.62% { left: 10%; opacity: 1; }
+                                                100% { left: 20%; opacity: 0; }
+                                }
+                                @media only screen and (max-width: 600px) {
+                                                .item-1,.item-2,.item-3 {
+                                                                padding-top: 1em;
+                                                                font-size: 20px;
+                                                }
+                                                .style-font{
+                                                                font-size:20px;
+                                                }
+                                                .style-font1{
+                                                                font-size:30px;
+                                                }
+                                                .mobile-break { display: block; }
+                                                .mobile-padding { padding-bottom: 20px; }
+                                }
+                                .centered {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                }
 
 
-	<div class="container-fluid">
-	 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ask Your question?</button>
-	 <br>
-	 <br>
-	</div>
-
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="myModalLabel">Please Enter the Details</h4>
-			</div>
-			<div class="modal-body">
-				<form action ="{% url 'SaveProfile' %}"  method = "POST">{% csrf_token %}
-					Name:<input type="text" name="Name" class="form-control required_field" placeholder="Enter your name" required/><br>
-					Email:<input type="text" name="EmailId" class="form-control required_field" placeholder="Enter your email id" required/><br>
-					Phone No (Optional):<input type="text" name="phone" class="form-control" placeholder="Enter your Phone no"/><br>
-					Your Question Here:<input type="text" name="question" class="form-control required_field" placeholder="Enter your Question" maxlength="200" required/><br>
-			</div>
+                </style>
 
 
-			<div class="modal-footer">
-				<button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
-				<button type="submit" class="btn btn-success btn-sm">Submit</button>
-				</form>
-		</div>
-	</div>
+</head>
+
+
+                <div class="container-fluid">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ask Your question?</button>
+                <br>
+                <br>
+                </div>
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                <h4 class="modal-title" id="myModalLabel">Please Enter the Details</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                                <form action ="{% url 'home.views.SaveProfile' %}"  method = "POST">{% csrf_token %}
+                                                                                Name:<input type="text" name="Name" class="form-control required_field" placeholder="Enter your name" required/><br>
+                                                                                Email:<input type="text" name="EmailId" class="form-control required_field" placeholder="Enter your email id" required/><br>
+                                                                                Phone No (Optional):<input type="text" name="phone" class="form-control" placeholder="Enter your Phone no"/><br>
+                                                                                Your Question Here:<input type="text" name="question" class="form-control required_field" placeholder="Enter your Question" maxlength="200" required/><br>
+                                                </div>
+
+
+                                                <div class="modal-footer">
+                                                                <button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
+                                                                <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                                                                </form>
+                                </div>
+                </div>
 
 </div>
 </div>
 
-
-
-<div class="bs-example">
+               <!-- {% for i in data %} -->
+<!-- <div class="bs-example">
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading" id="zero">
+
                 <h4 class="panel-title">
-                    <p data-toggle="collapse" data-parent="#accordion" href="#collapseOne" style="color:red"; id="flip"><button><span class="glyphicon glyphicon-plus"></span></button>
-
-											{% for i in data %}
 
 
-											{{i.question}}
-											<br>
+                    <p data-toggle="collapse" data-parent="#accordion"  style="color:red"; id="flip"><button><span class="glyphicon glyphicon-plus"></span></button> -->
 
-											{% endfor %}
+                    <!-- {{i.question}}
 
-										</p>
+
+                                                                                                                                                                                <br>
+                                                                                                                                                                                <br>
+                                                                                                                                                                                <!-- {{i.answer}} -->
+                                                                                                                                                <!-- {% endfor %}
+
+                                                                                                                                                                </p>
                 </h4>
             </div>
-            <div id="panel" class="panel-collapse collapse">
+                                                                                                                {% for i in data %}
+             <div id="panel" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
-											{% for i in data %}
 
 
-											{{i.answer}}
 
-											{% endfor %}
-										</p>
+                                                                                                                                                                                {{i.answer}}
 
+                                                                                                                                                                                {% endfor %}
+                                                                                                                                                                </p>
+<br> -->
+<!-- <br>
             </div>
         </div>
                 </div>
 </div>
 
 
+</div> -->
+
+
+
+  {% for i in data %}
+<div class="panel">
+<p class="accordion" style="color:red" "font-size:20"; id="flip"><b>{{i.question}}</p><b>
+<div class="panel">
+  <p id="pannel">{{i.answer}}</p>
+
+</div>
+</div>
+{% endfor %}
 
 
 
@@ -214,43 +235,58 @@
 
 
 
-		<script src="{% static 'home/js/jquery.min.js' %}"></script>
-	<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'home/js/custom.js' %}"></script>
-	<script src="{% static 'home/js/jquery.touchswipe.min.js' %}"></script>
-	<script src="{% static 'home/js/bootstrap-touch-slider.js' %}"></script>
-	<script type="text/javascript" src="{% static 'home/marquee/jquery.easing.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'home/marquee/jquery.easy-ticker.js' %}"></script>
-	<script type="text/javascript">
-		$('#bootstrap-touch-slider').bsTouchSlider();
-
-		/*Quotes*/
-		function initQuoteCarousel(){
-			var $quotesWrapper = $(".cust-quotes");
-			var $quotes = $quotesWrapper.find("blockquote");
-			if (!$quotes.length) {
-				return;
-			}
-		    var selectNextQuote = function () {
-				// keep move first quote in dom to the end to make continous
-				var $quote = $quotesWrapper.find("blockquote:first").detach().appendTo($quotesWrapper);
-				setTimeout(selectNextQuote, $quote.data("timeout"));
-			};
-			setTimeout(selectNextQuote, $quotes.filter(":first").data("timeout"));
-		}
-		$(function () {
-			initQuoteCarousel();
-		});
 
 
 
-	</script>
-	<script>
-$(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").slideToggle("slow");
-  });
-});
+                <script src="{% static 'home/js/jquery.min.js' %}"></script>
+                <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+                <script src="{% static 'home/js/custom.js' %}"></script>
+                <script src="{% static 'home/js/jquery.touchswipe.min.js' %}"></script>
+                <script src="{% static 'home/js/bootstrap-touch-slider.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/marquee/jquery.easing.min.js' %}"></script>
+                <script type="text/javascript" src="{% static 'home/marquee/jquery.easy-ticker.js' %}"></script>
+                <script type="text/javascript">
+                                $('#bootstrap-touch-slider').bsTouchSlider();
+
+                                /*Quotes*/
+                                function initQuoteCarousel(){
+                                                var $quotesWrapper = $(".cust-quotes");
+                                                var $quotes = $quotesWrapper.find("blockquote");
+                                                if (!$quotes.length) {
+                                                                return;
+                                                }
+                                    var selectNextQuote = function () {
+                                                                // keep move first quote in dom to the end to make continous
+                                                                var $quote = $quotesWrapper.find("blockquote:first").detach().appendTo($quotesWrapper);
+                                                                setTimeout(selectNextQuote, $quote.data("timeout"));
+                                                };
+                                                setTimeout(selectNextQuote, $quotes.filter(":first").data("timeout"));
+                                }
+                                $(function () {
+                                                initQuoteCarousel();
+                                });
+
+
+
 </script>
+
+                <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("Active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
+                }
+                </script>
+
+
 
 {% endblock aboutus %}
