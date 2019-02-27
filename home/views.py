@@ -40,7 +40,7 @@ def index(request):
     r2 = HomeR2.objects.all()
     r5 = HomeR4.objects.all()
     r3 = HomeR3.objects.filter(active=1).order_by('-updated_on')[0:3]
-    data=Feedback.objects.all()
+    data=Feedback.objects.all().order_by('-id')
     filename = Archives.objects.filter(active=1).order_by('-updated_on')[:3]
     print(filename)
     size=len(filename)
