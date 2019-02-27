@@ -309,7 +309,7 @@ def SaveProfile(request):
             saved = True
         else:
             MyProfileForm = question()
-        return render(request,'home/save.html',locals())
+        return render(request,'home/save1.html',locals())
 
 def login(request):
     if request.is_ajax():
