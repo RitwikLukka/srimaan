@@ -1,0 +1,183 @@
+{% extends 'home/fbform.html' %}
+{% load staticfiles %}
+{% block aboutus %}
+
+	<style>
+		.dropdown-menu li, .dropdown-menu li a {
+			float: right;
+			white-space: normal;
+			width: 100%;
+			height: auto;
+			word-wrap: break-word;
+			background-color: #F77C2D;
+		}
+		.dropdown-submenu {
+			position: relative;
+		}
+		 .dropdown-submenu>.dropdown-menu {
+			top: 0;
+			left: 100%;
+			margin-top: -1px;
+		}
+		.dropdown-submenu>.dropdown-menu {
+		    top: 0;
+		    left: 100%;
+		    margin-top: -6px;
+		    margin-left: -1px;
+		    -webkit-border-radius: 0 6px 6px 6px;
+		    -moz-border-radius: 0 6px 6px;
+		    border-radius: 0 6px 6px 6px;
+		}
+
+		.dropdown-submenu:hover>.dropdown-menu {
+		    display: block;
+		}
+	.dropdown-submenu:hover>a:after {
+		    border-left-color: #fff;
+		}
+
+		.dropdown-submenu.pull-left {
+		    float: none;
+		}
+
+		.dropdown-submenu.pull-left>.dropdown-menu {
+		    left: -100%;
+		    margin-left: 10px;
+		    -webkit-border-radius: 6px 0 6px 6px;
+		    -moz-border-radius: 6px 0 6px 6px;
+		    border-radius: 6px 0 6px 6px;
+		}
+
+
+
+		.image-hover:hover{
+			transform: translateY(-10px);
+		}
+		.image_position{
+			height:100px;
+			padding-left:50px
+		}
+		.image_content{
+			font-weight:Bold;
+			font-size:14px;
+			width:100%
+		}
+		.read_more{
+			font-weight:Bold;
+			cursor:pointer
+		}
+		.required_field::before{
+			content: "*";
+			color: red;
+		}
+		.item-1,
+		.item-2,
+		.item-3 {
+			position: absolute;
+			display: block;
+			width: 75%;
+			font-size: 25px;
+			animation-duration: 20s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		.item-1{
+			animation-name: anim-1;
+		}
+
+		.item-2{
+			animation-name: anim-2;
+		}
+
+		.item-3{
+			animation-name: anim-3;
+		}
+
+		@keyframes anim-1 {
+			0%, 8.3% { left: 30%; opacity: 0; }
+			8.3%,25% { left: 10%; opacity: 1; }
+			33.33%, 100% { left: 20%; opacity: 0; }
+		}
+
+		@keyframes anim-2 {
+			0%, 33.33% { left: 30%; opacity: 0; }
+			41.63%, 58.29% { left: 10%; opacity: 1; }
+			66.66%, 100% { left: 20%; opacity: 0; }
+		}
+
+		@keyframes anim-3 {
+			0%, 66.66% { left: 30%; opacity: 0; }
+			74.96%, 91.62% { left: 10%; opacity: 1; }
+			100% { left: 20%; opacity: 0; }
+		}
+		@media only screen and (max-width: 600px) {
+  			.item-1,.item-2,.item-3 {
+				padding-top: 1em;
+				font-size: 20px;
+			}
+			.style-font{
+				font-size:20px;
+			}
+			.style-font1{
+				font-size:30px;
+			}
+			.mobile-break { display: block; }
+			.mobile-padding { padding-bottom: 20px; }
+		}
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+	</style>
+
+		<div class="container-fluid">
+
+			<div class='col-md-10 col-md-offset-1'>
+				<!-- <h2 class="right Bree" style="color: #0E68AA">GURUKULAM</h2>	 -->
+				<h2 class="fontfamily">GURUKULAM&nbsp;&nbsp;&nbsp;</h2>
+					<br>
+					<div class="container_slider row" style="">
+			            <div class="container_wrapper">
+							{% for content in r4.all %}
+			                <div class="col-lg-6">
+			                    <div class="">
+			                        <div class="card">
+			                            <div class="card-body">
+			                                <img class="scroll_image" src="{{ content.image.url }}" onclick="window.open(this.src);">
+			                            </div>
+			                            <div class="card-footer">
+			                                <!-- <p class="BgOrange pull-left F15 scroll_footer">{{ content.content }}</p> -->
+			                            </div>
+			                        </div>
+			                    </div>
+							</div>
+							<br>
+							{% endfor %}
+						</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{% for content in file_content %}
+					{{ content.text | safe }}
+				{% endfor %}
+			</div>
+		</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.touchswipe.min.js"></script>
+	<script src="js/bootstrap-touch-slider.js"></script>
+	<script type="text/javascript">
+		$('p').each(function() {
+ var $this = $(this);
+ if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+     $this.remove(); });
+	</script>
+{% endblock aboutus %}

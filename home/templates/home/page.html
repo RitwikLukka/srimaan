@@ -1,0 +1,51 @@
+{% extends 'home/fbform.html' %}
+{% load staticfiles %}
+{% block aboutus %}
+
+
+	<div class="container-fluid">
+
+			<div class='col-md-10 col-md-offset-1'>
+				<!-- <h2 class="right Bree" style="color: #0E68AA">GURUKULAM</h2>	 -->
+				<h2 class="fontfamily">{{name}}&nbsp;&nbsp;&nbsp;</h2>
+					<br>
+					<div class="container_slider row" style="">
+			            <div class="container_wrapper">
+							{% for content in r4.all %}
+			                <div class="col-lg-6">
+			                    <div class="">
+			                        <div class="card">
+			                            <div class="card-body">
+			                                <img class="scroll_image" src="{{ content.image.url }}" onclick="window.open(this.src);">
+			                            </div>
+			                            <div class="card-footer">
+			                                <!-- <p class="BgOrange pull-left F15 scroll_footer">{{ content.content }}</p> -->
+			                            </div>
+			                        </div>
+			                    </div>
+							</div>
+							<br>
+							{% endfor %}
+						</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				{% for content in file_content %}
+					{{ content.text | safe }}
+				{% endfor %}
+			</div>
+		</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.touchswipe.min.js"></script>
+	<script src="js/bootstrap-touch-slider.js"></script>
+	<script type="text/javascript">
+		$('p').each(function() {
+ var $this = $(this);
+ if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+     $this.remove(); });
+	</script>
+{% endblock aboutus %}

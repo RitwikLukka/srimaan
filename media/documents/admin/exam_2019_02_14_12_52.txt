@@ -1,0 +1,12 @@
+api
+1:why api?
+2:how to manipulate data with api?
+3:request and response with api?
+4:cache memory
+5:caching
+6:how google is using cache?
+7:how google native advertisment is working?
+8:cookies
+9:xml and xslt(soap call)
+10:jenkins
+11:create a local repository

@@ -1,0 +1,168 @@
+{% extends 'home/fbform.html' %}
+{% load staticfiles %}
+{% block aboutus %}
+
+	<style>
+		.dropdown-menu li, .dropdown-menu li a {
+			float: right;
+			white-space: normal;
+			width: 100%;
+			height: auto;
+			word-wrap: break-word;
+			background-color: #F77C2D;
+		}
+		.dropdown-submenu {
+			position: relative;
+		}
+		 .dropdown-submenu>.dropdown-menu {
+			top: 0;
+			left: 100%;
+			margin-top: -1px;
+		}
+		.dropdown-submenu>.dropdown-menu {
+				top: 0;
+				left: 100%;
+				margin-top: -6px;
+				margin-left: -1px;
+				-webkit-border-radius: 0 6px 6px 6px;
+				-moz-border-radius: 0 6px 6px;
+				border-radius: 0 6px 6px 6px;
+		}
+
+		.dropdown-submenu:hover>.dropdown-menu {
+				display: block;
+		}
+		.dropdown-submenu:hover>a:after {
+				border-left-color: #fff;
+		}
+
+		.dropdown-submenu.pull-left {
+				float: none;
+		}
+
+		.dropdown-submenu.pull-left>.dropdown-menu {
+				left: -100%;
+				margin-left: 10px;
+				-webkit-border-radius: 6px 0 6px 6px;
+				-moz-border-radius: 6px 0 6px 6px;
+				border-radius: 6px 0 6px 6px;
+		}
+
+
+		.fontfamily{
+			font-family: 'Bree Serif', serif;
+			font-size:22px;
+			color:#0e68aa;
+			padding-right:30px;
+		}
+		.fontfamily1{
+			font-family: 'Lato', sans-serif;
+			font-size:16px;
+			padding-left:105px;
+			padding-right:30px;
+			text-align: justify;
+		}
+		.fontfamily2{
+			font-family: 'Lato', sans-serif;
+			font-weight:Bold;
+			font-size:22px;
+			color:#d64f85;
+			padding-left:15px;
+			padding-right:30px;
+		}
+		.fontfamily3{
+			font-family: 'Lato', sans-serif;
+			font-size:16px;
+			padding-left:15px;
+			padding-right:30px;
+			text-align: justify;
+		}
+		h2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		h2 span {
+			background: #fff;
+			margin: 0 15px;
+		}
+		h2:after {
+			background: black;
+			height: 0.5px;
+			flex: 1;
+			content: '';
+		}
+		.img_heading{
+			color:#F77C2D;
+			font-weight:Bold;
+			font-size:16px;
+			font-family: 'Lato', sans-serif;
+		}
+		.row_content1{
+			font-family: 'Lato', sans-serif;
+			font-size:16px;
+			text-align:justify;
+		}
+		.row_content2{
+			text-align: justify;
+			font-family: 'Crimson Text', serif;
+			font-size: 18px;
+		}
+	</style>
+
+	<div class="col-md-2 col-md-offset-5 panel pull-right" style="margin-top:-15px;display:none;" id="navforms">
+		<form class="navbar-form navbar-right" action="" method="POST" style="margin-top:15px;" role="search">  <!--Hardcoded Margin-->
+			<div class="input-group stylish-input-group">
+				<input type="text" class="form-control input-sm"  placeholder="Search" >
+				<span class="input-group-addon">
+					<button type="submit" >
+						<span class="glyphicon glyphicon-search F10"></span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Feedback</h4>
+			</div>
+			<div class="modal-body">
+					<form action ="/home/fb/"  method = "POST">{% csrf_token %}
+					Name:<input type="text" name="name" class="form-control required_field" placeholder="Enter your name" required/><br>
+					City:<input type="text" name="city" class="form-control required_field" placeholder="Enter your city" required/><br>
+
+					Your Feedbacks Here:<textarea rows="5" cols="50" class="form-control required_field" name="feedback" placeholder="Enter your feedback" maxlength="300" required/></textarea><br>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
+				<button type="submit" class="btn btn-success btn-sm">Feedbacks are welcome</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class='col-md-10 col-md-offset-1'>
+				<!-- <h2 class="right Bree" style="color: #0E68AA">GURUKULAM</h2>	 -->
+				<h2 class="fontfamily">GURUKULAM&nbsp;&nbsp;&nbsp;</h2>
+				<h1>Your Payment Was Not Processed </h1>
+				<p> PLEASE TRY AGAIN !!</p>
+			</div>
+		</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.touchswipe.min.js"></script>
+	<script src="js/bootstrap-touch-slider.js"></script>
+	<script type="text/javascript">
+		$('p').each(function() {
+ var $this = $(this);
+ if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+     $this.remove(); });
+	</script>
+{% endblock aboutus %}

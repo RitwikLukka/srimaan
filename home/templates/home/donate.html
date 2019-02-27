@@ -1,0 +1,532 @@
+{% extends 'home/fbform.html' %}
+{% load staticfiles %}
+{% block aboutus %}
+
+	<style>
+		.dropdown-menu li, .dropdown-menu li a {
+			float: right;
+			white-space: normal;
+			width: 100%;
+			height: auto;
+			word-wrap: break-word;
+			background-color: #F77C2D;
+		}
+		<!-- *{ -->
+			<!-- margin: 0; -->
+			<!-- padding: 0; -->
+			<!-- -webkit-box-sizing: border-box; -->
+					<!-- box-sizing: border-box; -->
+		<!-- }			 -->
+		h1{
+			font-size: 2.5rem;
+			font-family: 'Montserrat';
+			font-weight: normal;
+			color: #444;
+			text-align: center;
+			margin: 2rem 0;
+		}
+
+		.wrapper{
+			margin: 0 auto;
+		}
+		.container{
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-perspective: 1000px;
+			perspective: 1000px;
+		}
+		.front,.back{
+			background-size: cover;
+			background-position: center;
+			-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			text-align: center;
+			min-height: 280px;
+			height: auto;
+			border-radius: 10px;
+			color: #fff;
+			font-size: 1.5rem;
+		}
+		.back{
+			background: #cedce7;
+			background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+			background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+			background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+		}
+
+		.front:after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			content: '';
+			display: block;
+			opacity: .6;
+			background-color: #000;
+			-webkit-backface-visibility: hidden;
+					backface-visibility: hidden;
+			border-radius: 10px;
+		}
+		.container:hover .front,.container:hover .back{
+			-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+			transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+		}
+		.back{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.inner{
+			-webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+					transform: translateY(-50%) translateZ(60px) scale(0.94);
+			top: 50%;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			padding: 2rem;
+			-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+			outline: 1px solid transparent;
+			-webkit-perspective: inherit;
+					perspective: inherit;
+			z-index: 2;
+		}
+		.container .back{
+			-webkit-transform: rotateY(180deg);
+					transform: rotateY(180deg);
+			-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+		}
+		.container .front{
+			-webkit-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+		}
+		.container:hover .back{
+			-webkit-transform: rotateY(0deg);
+					transform: rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+		}
+		.container:hover .front{
+			-webkit-transform: rotateY(-180deg);
+					transform: rotateY(-180deg);
+			-webkit-transform-style: preserve-3d;
+					transform-style: preserve-3d;
+		}
+		.front .inner p{
+			font-size: 20px;
+			<!-- margin-bottom: 2rem; -->
+			position: relative;
+		}
+		.back .inner p{
+			font-size: 14px;
+			<!-- margin-bottom: 2rem; -->
+			position: relative;
+		}
+		.front .inner span{
+			color: rgba(255,255,255,0.7);
+			font-family: 'Montserrat';
+			font-weight: 300;
+		}
+		@media screen and (max-width: 64rem){
+			.col{
+				width: calc(33.333333% - 2rem);
+			}
+		}
+		@media screen and (max-width: 48rem){
+			.col{
+				width: calc(50% - 2rem);
+			}
+		}
+		@media screen and (max-width: 32rem){
+			.col{
+				width: 100%;
+				margin: 0 0 2rem 0;
+			}
+		}
+		.round{
+			max-width: 960px	;
+			padding-top:20px;
+		}
+
+		.round a {
+			color: #FFF;
+		}
+
+		.round .button {
+			<!-- display: inline-block; -->
+			width: 100px;
+			height: 30px;
+			line-height: 10px;
+			margin: 5px;
+			position: relative;
+			overflow: hidden;
+			border: 2px solid white;
+			transition: color .5s;
+		}
+
+		.round .button:before {
+			content: "";
+			position: absolute;
+			z-index: -1;
+			background: white;
+			height: 150px;
+			width: 200px;
+			border-radius: 5%;
+		}
+
+		.round .button:hover {
+			color: #000;
+		}
+
+		.round .button:nth-child(1):before {
+			top: 100%;
+			left: 100%;
+			transition: all .7s;
+		}
+
+		.round .button:nth-child(1):hover:before {
+			top: -30px;
+			left: -30px;
+		}
+		.dropdown-menu li, .dropdown-menu li a {
+			float: right;
+			white-space: normal;
+			width: 100%;
+			height: auto;
+			word-wrap: break-word;
+			background-color: #F77C2D;
+		}
+		.dropdown-submenu {
+			position: relative;
+		}
+		 .dropdown-submenu>.dropdown-menu {
+			top: 0;
+			left: 100%;
+			margin-top: -1px;
+		}
+		.dropdown-submenu>.dropdown-menu {
+		    top: 0;
+		    left: 100%;
+		    margin-top: -6px;
+		    margin-left: -1px;
+		    -webkit-border-radius: 0 6px 6px 6px;
+		    -moz-border-radius: 0 6px 6px;
+		    border-radius: 0 6px 6px 6px;
+		}
+
+		.dropdown-submenu:hover>.dropdown-menu {
+		    display: block;
+		}
+	.dropdown-submenu:hover>a:after {
+		    border-left-color: #fff;
+		}
+
+		.dropdown-submenu.pull-left {
+		    float: none;
+		}
+
+		.dropdown-submenu.pull-left>.dropdown-menu {
+		    left: -100%;
+		    margin-left: 10px;
+		    -webkit-border-radius: 6px 0 6px 6px;
+		    -moz-border-radius: 6px 0 6px 6px;
+		    border-radius: 6px 0 6px 6px;
+		}
+
+
+
+
+	</style>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<br>
+				<div class="row">
+					<p class="F20 Blue" style="font-weight:Bold;padding-left:2px;font-family: 'Alegreya', sans-serif;">Sri Parasara Badri Narayana Bhattar&nbsp;:</p>
+					<p style="text-align:justify;font-family: 'Alegreya', serif;;" class="F20" >We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+					Every drop counts, and every rupee matters. We are working our best towards lending your hand to the one who needs it.
+					(Contributions towards these wonderful causes are tax deductible).</p>
+				</div>
+				<br><br>
+				<div class="col-md-12">
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p class="F15">Education</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style="" href={% url 'checkout' name="1" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Goshalai</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style="" href={% url 'checkout' name="2" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Temples</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="3" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Food</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style="" href={% url 'checkout' name="4" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-12">
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Health care</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style="" href={% url 'checkout' name="5" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Spiritual</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="6" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Vasthra Dhanam</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="7" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+						<div class="container" style="width:100%;" >
+							<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+								<div class="inner">
+									<p>Old Age Home</p>
+								</div>
+							</div>
+							<div class="back">
+								<div class="inner">
+									<p>
+										We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+										<div class="round">
+											<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="8" %}>Donate</a>
+										</div>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+		<div class="col-md-12">
+			<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+				<div class="container" style="width:100%;" >
+					<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+						<div class="inner">
+							<p class="F15">Games</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>
+								We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+								<div class="round">
+									<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="9" %}>Donate</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+				<div class="container" style="width:100%;" >
+					<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+						<div class="inner">
+							<p>Women empowerment</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>
+								We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+								<div class="round">
+									<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="10" %}>Donate</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+				<div class="container" style="width:100%;" >
+					<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+						<div class="inner">
+							<p>Marriage help</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>
+								We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+								<div class="round">
+									<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="11" %}>Donate</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3" ontouchstart="this.classList.toggle('hover');">
+				<div class="container" style="width:100%;" >
+					<div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+						<div class="inner">
+							<p>Dharma upanayanam</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>
+								We depend on the generosity of donors like you to serve the needy and safeguard good practices.
+								<div class="round">
+									<a class="button btn btn-md Bree" style=""  href={% url 'checkout' name="12" %}>Donate</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+	</div>
+</div>
+<br><br>
+
+
+
+
+		<!--CURRENT PROJECT-->
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.touchswipe.min.js"></script>
+	<script src="js/bootstrap-touch-slider.js"></script>
+	<script type="text/javascript">
+
+	</script>
+{% endblock aboutus %}

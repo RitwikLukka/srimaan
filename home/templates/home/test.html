@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    {% load static %}
+
+
+<link href="{% static 'table/css/bootstrap.min.css' %}" rel="stylesheet">
+<script src="{% static 'table/js/jquery.min.js' %}"></script>
+<script src="{% static 'table/js/bootstrap.min.js' %}"></script>
+		{% load staticfiles %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Srimaan trust</title>
+
+		<link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'home/css/framework.css' %}" />
+		<link rel="stylesheet" href="{% static 'home/css/custom.css' %}" />
+		<link rel="stylesheet" href="{% static 'home/css/utils.css' %}">
+		<link rel="stylesheet" href="{% static 'home/css/ribbon.css' %}">
+		<link rel="stylesheet" href="{% static 'home/css/fontawesome.css' %}" />
+        <link rel="stylesheet" href="{% static 'home/FontAwesome/css/font-awesome.css' %}"/>
+		<link rel="shortcut icon" href="{% static 'home/img/srimaanico.png' %}"/>
+		<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Bree+Serif|Catamaran|Exo|Antic+Slab|Lato|Crimson+Text" rel="stylesheet">
+        <link href="{% static 'home/css/animate.min.css' %}" rel="stylesheet" media="all">
+        <link href="{% static 'home/css/bootstrap-touch-slider.css' %}" rel="stylesheet" media="all">
+				<style>
+					.dropdown-menu li, .dropdown-menu li a {
+						float: right;
+						white-space: normal;
+						width: 100%;
+						height: auto;
+						word-wrap: break-word;
+						background-color: #F77C2D;
+					}
+					.dropdown-submenu {
+						position: relative;
+					}
+					 .dropdown-submenu>.dropdown-menu {
+						top: 0;
+						left: 100%;
+						margin-top: -1px;
+					}
+					.dropdown-submenu>.dropdown-menu {
+							top: 0;
+							left: 100%;
+							margin-top: -6px;
+							margin-left: -1px;
+							-webkit-border-radius: 0 6px 6px 6px;
+							-moz-border-radius: 0 6px 6px;
+							border-radius: 0 6px 6px 6px;
+					}
+
+					.dropdown-submenu:hover>.dropdown-menu {
+							display: block;
+					}
+				.dropdown-submenu:hover>a:after {
+							border-left-color: #fff;
+					}
+
+					.dropdown-submenu.pull-left {
+							float: none;
+					}
+
+					.dropdown-submenu.pull-left>.dropdown-menu {
+							left: -100%;
+							margin-left: 10px;
+							-webkit-border-radius: 6px 0 6px 6px;
+							-moz-border-radius: 6px 0 6px 6px;
+							border-radius: 6px 0 6px 6px;
+					}
+
+
+
+					.image-hover:hover{
+						transform: translateY(-10px);
+					}
+					.image_position{
+						height:100px;
+						padding-left:50px
+					}
+					.image_content{
+						font-weight:Bold;
+						font-size:14px;
+						width:100%
+					}
+					.read_more{
+						font-weight:Bold;
+						cursor:pointer
+					}
+					.required_field::before{
+						content: "*";
+						color: red;
+					}
+					.item-1,
+					.item-2,
+					.item-3 {
+						position: absolute;
+						display: block;
+						width: 75%;
+						font-size: 25px;
+						animation-duration: 20s;
+						animation-timing-function: ease-in-out;
+						animation-iteration-count: infinite;
+					}
+
+					.item-1{
+						animation-name: anim-1;
+					}
+
+					.item-2{
+						animation-name: anim-2;
+					}
+
+					.item-3{
+						animation-name: anim-3;
+					}
+
+					@keyframes anim-1 {
+						0%, 8.3% { left: 30%; opacity: 0; }
+						8.3%,25% { left: 10%; opacity: 1; }
+						33.33%, 100% { left: 20%; opacity: 0; }
+					}
+
+					@keyframes anim-2 {
+						0%, 33.33% { left: 30%; opacity: 0; }
+						41.63%, 58.29% { left: 10%; opacity: 1; }
+						66.66%, 100% { left: 20%; opacity: 0; }
+					}
+
+					@keyframes anim-3 {
+						0%, 66.66% { left: 30%; opacity: 0; }
+						74.96%, 91.62% { left: 10%; opacity: 1; }
+						100% { left: 20%; opacity: 0; }
+					}
+					@media only screen and (max-width: 600px) {
+							.item-1,.item-2,.item-3 {
+							padding-top: 1em;
+							font-size: 20px;
+						}
+						.style-font{
+							font-size:20px;
+						}
+						.style-font1{
+							font-size:30px;
+						}
+						.mobile-break { display: block; }
+						.mobile-padding { padding-bottom: 20px; }
+					}
+					.centered {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+					}
+
+				</style>
+
+
+	</head>
+<body class="BGbody" >
+    <div class="container-fluid">
+		<div class="row RibbonGrey Opac8 Pad5">
+			<div class="col-md-12">
+				<span class="Padded">Call &nbsp; <i class="fa fa-phone"></i>&nbsp;+91 9557549971, 72</span>
+				<span class="Padded"> | </span>
+				<span class="Padded"><i class="fa fa-envelope"></i>&nbsp;srimaantrust@gmail.com</span>
+				<span class="Padded"> | </span>
+				<span class="Padded"><i class="fa fa-question-circle"></i>&nbsp;Q&A</span>
+				<span class="Padded"> | </span>
+				<span class="Padded"><i class="fa fa-users"></i>&nbsp;Volunteers</span>
+				<span class="Padded"> | </span>
+				<span class="Padded"><i class="fa fa-comment"></i>&nbsp;Feedback</span>
+				<span class="Padded"> | </span>
+				<span class="Padded" onclick="$('#navforms').toggle();"><i class="fa fa-search"></i>&nbsp;Search</span>
+				<span class="pull-right">
+					<span class="Padded"><img src="{% static 'home/img/facebook.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/twitter.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/instagram.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/youtube.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/watsapp.png' %}" class="H20"/></span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-success SharpBorder BBlue BoxLightShadow">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span><img src="{% static 'home/img/srimaanico.png' %}" class="pull-left Pad5" style="width:50px;"/><a class="navbar-brand White Bree" href="{% url 'index' %}">SRIMAAN TRUST</a></span>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<!-- <li class="nodropdown"><a href="index.html"><img src="img/home.png" class="H30"/>&nbsp;HOME</a></li>  -->
+					<li class="nodropdown"><a href="{% url 'donate' %}"><img src="{% static 'home/img/donate.png' %}" class="H30"/>&nbsp;DONATE</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/about.png' %}" class="H30"/>&nbsp;ABOUT US	<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="{% url 'about_trust' %}">Srimaan Trust</a></li>
+							<li><a href="{% url 'about_bhattar' %}">Sri Parasara Badri Narayana Bhattar Swamy</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/social.png' %}" class="H30"/>&nbsp;SOCIAL <span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Education<span></span></a>
+              <ul class="dropdown-menu">
+				       <li><a tabindex="-1" href="#">Residential vedic school (gurukulam) at srirangam</a></li>
+				       <li><a tabindex="-1" href="#">Residential vedic school (gurukulam)  at ayodhya</a></li>
+				     	<li><a tabindex="-1" href="#">Senior gurukulam</a></li>
+					   <li><a tabindex="-1" href="#">International school with culture (acharyah school for leaders)</a></li>
+					   <li><a tabindex="-1" href="#">Part time school </a></li>
+					    <li><a tabindex="-1" href="#">Library</a></li>
+					    <li><a tabindex="-1" href="#">contests</a></li>
+					   <li><a tabindex="-1" href="#">Online class-divyaprabandham,vedham,tamil and sanskrit classes</a></li>
+				    	<li><a tabindex="-1" href="#">Teachers and parents workshop</a></li>
+				    	<li><a tabindex="-1" href="#">camps</a></li>
+					   <li><a tabindex="-1" href="#">Life work shop</a></li>
+				   	<li><a tabindex="-1" href="#">Educating village children</a></li>
+					   <li><a tabindex="-1" href="#">Skills development</a></li>
+					   <li><a tabindex="-1" href="#">Arts and fine arts</a></li>
+
+					</ul>
+        </li>
+
+				<li class="dropdown-submenu">
+				<a class="test" tabindex="-1" href="#">Health care<span></span></a>
+          <ul class="dropdown-menu">
+				 <li><a tabindex="-1" href="#">Health camp</a></li>
+				 <li><a tabindex="-1" href="#">Medical Aid</a></li>
+				<li><a tabindex="-1" href="#">Yoga camp</a></li>
+			</ul>
+		</li>
+
+
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Environmental protection<span></span></a>
+								<ul class="dropdown-menu">
+							 <li><a tabindex="-1" href="#">Goshalai</a></li>
+							 <li><a tabindex="-1" href="#">Cauvery cleaning</a></li>
+							<li><a tabindex="-1" href="#">Planting trees</a></li>
+							<li><a tabindex="-1" href="#">Awareness programme</a></li>
+							</ul>
+							</li>
+
+
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Food<span></span></a>
+								<ul class="dropdown-menu">
+							 <li><a tabindex="-1" href="#">Annadhanam</a></li>
+							 <li><a tabindex="-1" href="#">Free food at srirangam</a></li>
+							<li><a tabindex="-1" href="#">Provision for needy</a></li>
+							<li><a tabindex="-1" href="#">Awareness programme</a></li>
+							<li><a tabindex="-1" href="#">Organic farming</a></li>
+							</ul>
+							</li>
+
+							<li><a href="#">Jobs</a></li>
+
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Other services<span></span></a>
+								<ul class="dropdown-menu">
+							 <li><a tabindex="-1" href="#">Old age home</a></li>
+							 <li><a tabindex="-1" href="#">Free stay at srirangam infotech</a></li>
+							<li><a tabindex="-1" href="#">Clothes for needy</a></li>
+							<li><a tabindex="-1" href="#">Edu tours</a></li>
+							<li><a tabindex="-1" href="#">Exihibitions</a></li>
+							<li><a tabindex="-1" href="#">Marriage help</a></li>
+							<li><a tabindex="-1" href="#">Dharma upanayanam</a></li>
+							<li><a tabindex="-1" href="#">Divine discourses</a></li>
+							<li><a tabindex="-1" href="#">Honouring scholars</a></li>
+							<li><a tabindex="-1" href="#">Propagation of culture</a></li>
+							<li><a tabindex="-1" href="#">Women empowerment</a></li>
+							</ul>
+							</li>
+
+					</ul>
+
+					</li>
+
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/spritual.png' %}" class="H30"/>&nbsp;SPIRITUAL <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Heritage</a></li>
+							<li><a href="#">Nithya Homams</a></li>
+							<li><a href="#">We Pray For You</a></li>
+							<li><a href="#">Veedhi Pradhakshinams</a></li>
+							<li><a href="#">Parayanams</a></li>
+							<li><a href="#">Archanas</a></li>
+							<li><a href="#">Gramam Thorum Ramanujar</a></li>
+							<li><a href="#">Temple Services - Temple Cleaning Parayanams</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/subscribe1.png' %}" class="H30"/>&nbsp;GAMES/PUBLICATION<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">For games it should go to srimaan infotech</a></li>
+							<li><a href="#">Kainkaryam book subscription</a></li>
+							<li><a href="#">Srimaan info diary</a></li>
+						</ul>
+          </li>
+
+					<li class="nodropdown"><a href="#"><img src="{% static 'home/img/online.png' %}" class="H30"/>&nbsp;ONLINE COURSES</a></li>
+					<li class="nodropdown"><a href="#"><img src="{% static 'home/img/archive.png' %}" class="H30"/>&nbsp;ARCHIVES</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="col-md-2 col-md-offset-5 panel pull-right" style="margin-top:-15px;display:none;" id="navforms">
+		<form class="navbar-form navbar-right" action="" method="POST" style="margin-top:15px;" role="search">  <!--Hardcoded Margin-->
+			<div class="input-group stylish-input-group">
+				<input type="text" class="form-control input-sm"  placeholder="Search" >
+				<span class="input-group-addon">
+					<button type="submit" >
+						<span class="glyphicon glyphicon-search F10"></span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+      <head>
+    <title> my table </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.dataTables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.dataTables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.dataTables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.dataTables.net/1.10.19/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" href="https://cdn.dataTables.net/buttons/1.5.2/css/buttons.dataTables.min.css"/>
+    <script src="https:////cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+
+
+
+    </head>
+    <body>
+       <br /><br />
+ 	  <div class="container">
+ 	    <h3 align="center">List of Donors</h3>
+ 		<br />
+ 		<div class="table-responsive">
+ 		  <table id="employee_data" class="table table-striped table-bordered">
+ 		  <style>
+ 		  table{
+ 			  background-color:antiquewhite;
+ 		  }
+ 		  </style>
+ 		    <thead>
+ 			  <tr>
+ 			    <td>ID</td>
+ 				<td>reference_id</td>
+				<td>Content</td>
+			<td>Image</td>
+				<td>Link</td>
+					<td>Edit</td>
+ 			</tr>
+ 			</thead>
+ 				{% for i in r1c1 %}
+ 				 <tr>
+					 <td>{{i.id}}</td>
+					<td>{{i.reference_id}}</td>
+ 				 <td>{{i.content}}</td>
+ 				 <td>{{i.image}}</td>
+				 <td>{{i.link}}</td>
+				 <td> <button class="btn btn-xs btn-default" data-toggle="modal" onclick=""><span style="color:red"><i class="glyphicon glyphicon-pencil Red"></i></span></button></td>
+ 				 </tr>
+
+ 				{% endfor %}
+
+ 		   </table>
+ 	 </div>
+ 	 </div>
+ 	 </body>
+ 	 </html>
+ 	 <script>
+ 	 $(document).ready(function(){
+ 		$('#employee_data').DataTable();
+ 	 });
+ 	 </script>
+		</div>
+		<div class="row BoxLightShadow" style="margin-top:30px;background-color:#191919;">
+			<div class="col-md-12 Footer" style="margin:30px 0px 30px 0px;">
+				<div class="col-md-3">
+					<h4 class="FontOrange">CONNECT</h4>
+					<p>Feedback</p>
+					<p>Subscribe</p>
+					<hr>
+					<p><img src="{% static 'home/img/donation.png' %}" class="H50" /></p><br>
+					<p><img src="{% static 'home/img/volunteer.png' %}" class="H70" /></p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="FontOrange">MAKE A GIFT</h4>
+					<p>Asrams            </p>
+					<p>Temples           </p>
+					<p>For Blind         </p>
+					<p>Vedic Schools     </p>
+					<p>Protect Cows      </p>
+					<p>Tribal Schools    </p>
+					<p>Jims Hospital     </p>
+					<p>Relief Activities </p>
+					<p>Service Activities</p>
+					<p>Statue Of Equality</p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="FontOrange">LATEST DONATION ITEMS</h4>
+					<p>Make Yourself Lucky</p>
+					<p>Mineral Water Plant</p>
+					<p>Beersaipet Gurukulam Reconstruction</p>
+					<p>Tadiyaradhana Hall @ JIVA</p>
+					<p>Bhakthinivedana</p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="FontOrange">CONTACT US</h4>
+					<p>Srimaan Trust,<br>#231, South Uthara Street, Srirangam, Tiruchirappalli, Tamil Nadu 620006</p>
+					<p>Contact: 0431 243 1109</p>
+					<p>E-mail: srimaantrust@gmail.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="row BoxLightShadow Pad10 White" style="background-color:#282A2B;" >
+			<center>Copyright 2018 @ srimaantrust.com | All Rights Reserved</center>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.touchswipe.min.js"></script>
+	<script src="js/bootstrap-touch-slider.js"></script>
+	<script type="text/javascript">
+		$('p').each(function() {
+ var $this = $(this);
+ if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+     $this.remove(); });
+	</script>
+</body>
+</html>

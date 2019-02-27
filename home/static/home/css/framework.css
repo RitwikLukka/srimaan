@@ -1,0 +1,254 @@
+/**********************************************************
+	AUTHOR			: 	Prabhakaran J & Team
+	EMAIL			: 	prabhakaran-j@hcl.com
+	CONTACT			: 	9677304039
+	TYPE			:	CSS FrameWork
+	
+	Last Updated By	:	prabhakaran-j@hcl.com
+***********************************************************/
+
+/* .BGbody{ */
+	/* background: url(../img/bg.jpg) no-repeat center center fixed;  */
+	  /* -webkit-background-size: cover; */
+	  /* -moz-background-size: cover; */
+	  /* -o-background-size: cover; */
+	  /* background-size: cover; */
+.Catamaran{font-family: 'Catamaran', sans-serif;}
+.Bree{font-family: 'Bree Serif', serif; }
+.Exo{font-family: 'Exo', sans-serif; }
+.Bai{font-family: 'Bai Jamjuree', sans-serif; }
+/* } */
+
+
+/*TAG BASED CSS*/
+.BGbody{font-family:'Bai Jamjuree', sans-serif;background:url('../img/bg.png');}
+.BodyFont{font-family:'Bai Jamjuree', sans-serif;}
+
+/*BASIC FORMATTING */
+.U{text-decoration:underline;}
+.Bold{font-weight:bold;}
+.Normal{font-weight:normal;}
+
+/*ALIGNMENT CSS*/
+.Left{text-align:left;}
+.Right{text-align:right;}
+.Justify{text-align:justify;}
+.Fleft{float:left;}
+.Fright{float:right;}
+.Center{text-align:center;}
+
+/*FONT SIZING CSS*/
+.Htitle{font-size:40px;}
+.F10{font-size:10px;}.F11{font-size:11px;}.F12{font-size:12px;}.F13{font-size:13px;}.F14{font-size:14px;}
+.F20{font-size:20px;}.F30{font-size:30px;}.F40{font-size:40px;}.F50{font-size:50px;}.F60{font-size:60px;}.F70{font-size:70px;}
+.F5{font-size:5px;}.F15{font-size:15px;}.F25{font-size:25px;}.F35{font-size:35px;}.F45{font-size:45px;}.F55{font-size:55px;}
+
+/*PADDING CSS*/
+.Pad1{padding:1px;}.Pad2{padding:2px;}.Pad3{padding:3px;}.Pad4{padding:4px;}.Pad5{padding:5px;}.Pad6{padding:6px;}.Pad7{padding:76px;}.Pad8{padding:8px;}.Pad9{padding:9px;}.Pad10{padding:10px;}
+
+/*FONT FAMILY CSS*/
+.Lato{font-family:Lato;}
+.Satisfy{font-family:Satisfy;}
+
+/*INFO FONTS STYLE*/
+.small_emtag_r{font-size:11px;color:red;}
+.small_emtag_g{font-size:11px;color:green;}
+.small_emtag_i{font-size:11px;color:blue;}
+.small_emtag_o{font-size:11px;color:#F68121;}
+.emtag_r{color:red;}
+.emtag_g{color:green;}
+.emtag_i{color:blue;}
+
+/*CURSOR CSS*/
+.HandCursor{cursor:pointer;}
+
+/*BASIC BORDER CSS*/
+.Border{border:1px solid #E0E0E0;}
+.Borderbottom{border-bottom:1px solid #E0E0E0;}
+.Borderleft{border-left:1px solid #E0E0E0;}
+.Borderright{border-right:1px solid #E0E0E0;}
+.Bordertop{border-top:1px solid #E0E0E0;}
+.BlueBorderBottom{border-bottom:1px solid #006CB7;}
+
+/*ERROR BORDERS CSS*/
+.BorderRed{border:1px solid #E14938;}
+.BorderGreen{border:1px solid #61BD6D;}
+.OrangeBorder{border:1px solid #F68121;}
+.BlueBorder{border:1px solid #0E68AA;}
+.GreyBorder{border:1px solid #BDBDBD;}
+
+.BGOrangeBorder{border:1px solid #F68121;color:#F68121;background-color:#FFF;}
+.BGOrangeOnlyBorder{border:1px solid #F68121;color:#000;background-color:transparent;}
+.BGGreyBorder{border:1px solid #9E9E9E;color:#9E9E9E;background-color:#F8F8F8;}
+.BGLiteOrangeBorder{border:1px solid #E67E22;color:#E67E22;background-color:#fff;}
+.BGGreenyGreyBorder{border:1px solid #607D8B;color:#607D8B;background-color:#fff;}
+.BGGreenBorder{border:1px solid Green;color:Green;background-color:#fff;}
+.SharpBorder{border-radius:0px;}
+.noborder{border:none;}
+/*OTHER CSS CLASSES*/
+.Quote{font-family:Satisfy;font-size:22px;}
+.btn-circle{border-radius:45px;}
+
+
+/*BASIC COLORS */
+.Black{color:#000;}
+.Bold{font-weight:bold;}
+.white{color:#FFF !important;}
+.Orange{color:#F77C2D;}
+.Green{color:#0B8F5E;}
+.Red{color:#E52427;}
+.Grey{color:#616161;}
+.Blue{color:#0E68AA;}
+.DarkGrey{color:#DFDFDF;}
+.LightGrey{color:#E9EAED;}
+.GreenyGrey{color:#607D8B;}
+
+/*BACKGOUND COLORED TEXT CSS*/
+.BgGreenWhite{background-color:#5CB85C;color:#FFF;}
+.BgRedWhite{background-color:#D9534F;color:#FFF;}
+.BgGreenyGreyWhite{background-color:#607D8B;color:#FFF;}
+.OrangeWhite{color:#FFF;background-color:#F77C2D;padding:0px 3px;}
+.Opac1{opacity:0.1;}.Opac2{opacity:0.2;}.Opac3{opacity:0.3;}.Opac4{opacity:0.4;}.Opac5{opacity:0.5;}.Opac6{opacity:0.6;}.Opac7{opacity:0.7;}.Opac8{opacity:0.8;}.Opac9{opacity:0.9;}
+
+/*BACKGOUND IMAGE CSS*/
+.BgTile{background-image:url("../img/tile.gif");}
+.BgTile1{background-image:url("../img/tile1.png");}
+.BgTile2{background-image:url("../img/tile2.png");}
+.BgTile3{background-image:url("../img/tile3.png");}
+.BgTile4{background-image:url("../img/tile4.png");}
+
+/*EXTRA DIV CSS */
+.BWconsole{background-color:#000;color:#FFF;}
+.BBconsole{background-color:lightblue;color:#000;}
+
+/*HEIGHT & WIDTH SIZING FROM 50-600 with 50 interval*/
+.H10{height:10px;}.H20{height:20px;}.H30{height:30px;}.H40{height:40px;}.H50{height:50px;}.H60{height:60px;}.H70{height:70px;}.H80{height:80px;}.H90{height:90px;}
+.H100{height:100px;}.H150{height:150px;}.H160{height:160px;}.H170{height:170px;}.H180{height:180px;}.H190{height:190px;}.H200{height:200px;}.H250{height:250px;}.H300{height:300px;}.H350{height:350px;}.H400{height:400px;}.H450{height:450px;}.H500{height:500px;}.H550{height:550px;}.H600{height:600px;}
+.W50{width:50px;}.W100{width:100px;}.W150{width:150px;}.W200{width:200px;}.W250{width:250px;}.W300{width:300px;}.W350{width:350px;}.W400{width:400px;}.W450{width:450px;}.W500{width:500px;}.W550{width:550px;}.W600{width:600px;}.W1200{width:1200px;}
+.FullWidth{width:100%;}
+.FullHeight{height:100%;}
+
+/*BUTTON BORDERED CSS*/
+.BtnGreen,.BtnGreen:hover{border:1px solid #2DCC70;color:#2DCC70;background-color:#FFF;}
+.BtnGreen1,.BtnGreen1:hover{border:1px solid #449D44;color:#449D44;background-color:#FFF;}
+.BtnTerq,.BtnTerq:hover{border:1px solid #17A086;color:#17A086;background-color:#FFF;}
+.BtnTerq1,.BtnTerq1:hover{border:1px solid #19BD9B;color:#19BD9B;background-color:#FFF;}
+.BtnOrange,.BtnOrange:hover{border:1px solid #F77C2D;color:#F77C2D;background-color:transparent;}
+.BtnBlue,.BtnBlue:hover{border:1px solid #0E68AA;color:#0E68AA;background-color:transparent;}
+
+.BtnBGreen{background-color:#2DCC70;color:#FFF;}
+.BtnBGreen1{background-color:#449D44;color:#FFF;}
+.BtnBTerq{background-color:#17A086;color:#FFF;}
+.BtnBTerq1{background-color:#19BD9B;color:#FFF;}
+
+/*BOX SHADOW */
+.BoxShadow{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.BoxLightShadow{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);}
+
+/*IMAGE CSS*/
+.DispImg{height:40px;}
+
+/*AJAX PAGE LOADER CSS*/
+#loaderdiv{display : none;}
+#loaderdiv.show{
+	display : block;
+	position : fixed;
+	z-index: 100;
+	background-image : url('../img/spinner.gif');
+	background-color:#666;
+	opacity : 0.8;
+	background-repeat : no-repeat;
+	background-position : center;
+	left : 0;
+	bottom : 0;
+	right : 0;
+	top : 0;
+}
+
+/*######################## SCREEN SIZE CSS ENDS ###################################*/
+/* For Desktop : */
+@media only screen and (min-width: 768px) {
+	.headimgdiv{
+		background: url('../img/bg1.png') no-repeat;
+		background-size:100% auto;
+		width:100%;
+		height:150px;
+		margin:0;
+	}
+}
+
+/* For Tablet: */
+@media only screen and (min-width: 600px) {}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+   .headimgdiv{
+	   background: url('../img/bg1.png') no-repeat;
+		background-size:100% auto;
+		width:100%;
+		height:50px;
+	}
+	.thumbnail{
+		font-size:5px;
+		color:red;
+	}
+}
+/*######################## SCREEN SIZE CSS ENDS ###################################*/
+
+/*LOADER CSS*/
+#loader{
+	background-image:url('../img/spinner.gif');background-size:cover;background-repeat:no-repeat;background-position:center center;
+}
+
+/*--------------------- RIBBON CSS -----------*/
+.box {
+  width: 200px; height: 300px;
+  position: relative;
+  border: 1px solid #BBB;
+  background: #EEE;
+}
+.ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#9BC90D 0%, #79A70A 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #79A70A;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #79A70A;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #79A70A;
+}
+/*------- rIBBON ----*/
+

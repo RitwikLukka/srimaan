@@ -1,0 +1,55 @@
+#--------------------------SOP-----------------------------------#
+*student profile 
+    !name in english/tamil
+    !gender(m/f)
+    !fathers name 
+    !mothers name
+    !present address 
+    !permanant address
+    !EMIS number
+    !admission num
+    !aadhar #
+    !community(dd list)
+    !subcast(dd list)
+    !blood group
+    !gender
+    !religion
+    !date of birth
+    !mother tongue
+    !father occupation
+    !mother #
+    !parent a/i
+    !mobile number (primary/secondary)
+    !class
+    !section
+    !doj
+    !Yearly performance Report
+    !Location details
+    !medium(e)
+    !birth certificate num
+    !community certificate num
+    !RTE(YES/NO)
+    !last studied school
+#school profile 
+#staff details
+    !staff name
+    !dob
+    !sslc place | year of completion
+    !ug            *
+    !pg            *
+    !b.ed          *
+    !d.ted         *
+    !present address
+    !permananet address
+    !aadhar number
+    !year of expereince
+    !last working school
+    !date of joining
+    !increment details(year wise)
+    !performance report (year wise)
+    !remarks
+    !mob no
+    
+
+    
+    

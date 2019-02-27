@@ -1,0 +1,160 @@
+{% extends 'home/fbform.html' %}
+{% load staticfiles %}
+{% block aboutus %}
+	<style>
+		.dropdown-menu li, .dropdown-menu li a {
+			float: right;
+			white-space: normal;
+			width: 100%;
+			height: auto;
+			word-wrap: break-word;
+			background-color: #F77C2D;
+		}
+		.dropdown-submenu {
+			position: relative;
+		}
+		 .dropdown-submenu>.dropdown-menu {
+			top: 0;
+			left: 100%;
+			margin-top: -1px;
+		}
+		.dropdown-submenu>.dropdown-menu {
+		    top: 0;
+		    left: 100%;
+		    margin-top: -6px;
+		    margin-left: -1px;
+		    -webkit-border-radius: 0 6px 6px 6px;
+		    -moz-border-radius: 0 6px 6px;
+		    border-radius: 0 6px 6px 6px;
+		}
+
+		.dropdown-submenu:hover>.dropdown-menu {
+		    display: block;
+		}
+	.dropdown-submenu:hover>a:after {
+		    border-left-color: #fff;
+		}
+
+		.dropdown-submenu.pull-left {
+		    float: none;
+		}
+
+		.dropdown-submenu.pull-left>.dropdown-menu {
+		    left: -100%;
+		    margin-left: 10px;
+		    -webkit-border-radius: 6px 0 6px 6px;
+		    -moz-border-radius: 6px 0 6px 6px;
+		    border-radius: 6px 0 6px 6px;
+		}
+
+
+
+		.fontfamily{
+			font-family: 'Lato', sans-serif;
+			font-weight:Bold;
+			font-size:22px;
+			color:#d64f85;
+			padding-left:100px;
+			padding-right:30px;
+		}
+		.fontfamily1{
+			font-family: 'Lato', sans-serif;
+			font-size:16px;
+			padding-left:105px;
+			padding-right:30px;
+			text-align: justify;
+		}
+		.fontfamily2{
+			font-family: 'Lato', sans-serif;
+			font-weight:Bold;
+			font-size:22px;
+			color:#d64f85;
+			padding-left:15px;
+			padding-right:30px;
+		}
+		.fontfamily3{
+			font-family: 'Lato', sans-serif;
+			font-size:16px;
+			padding-left:15px;
+			padding-right:30px;
+			text-align: justify;
+		}
+		h2 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		h2 span {
+			background: #fff;
+			margin: 0 15px;
+		}
+		h2:after {
+			background: black;
+			height: 0.5px;
+			flex: 1;
+			content: '';
+		}
+		.img_heading{
+			color:#F77C2D;
+			font-weight:Bold;
+			font-size:16px;
+			font-family: 'Lato', sans-serif;
+		}
+		.row_content1{
+			font-family: 'Lato', sans-serif;
+			font-size:16px;
+			text-align:justify;
+		}
+	</style>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-10">
+				<h2 class="right fontfamily">Sri Parasara Badri Narayana Bhattar Swamy</h2><br><br>
+				<p class="fontfamily1" >
+					Srimaan Trust is a charitable organization. It aims to aid the economically downtrodden people of our society. It aspires to see a ray of hope and confidence on the faces of people who think they have no future on this planet. Innovative and novel means are adopted to reach the poor and help them in times of need.<br><br>
+					In today's fast moving world, everyone forced to act just like machine and living with so many tensions and worries.<br><br>
+					To forget the above and look after how our ancestors live without any tension or worries, just spare your precious time to view the oncoming slides fully deviated from modern polluted world.Surely you will get pleasure and inputs to live like our ancestor in our precious life. Your need is very essential for us.<br><br>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+				<div class="col-md-5">
+					<div class="col-md-12" style="padding-left:90px">
+						<span class="img_heading">Sri Parasara Badri Narayana Bhattar Swamy</span>
+					</div>
+					<br><br>
+					<div style="padding-left:90px">
+						<img src="{% static 'home/trust_images/bhattar.png' %}" class="H300" />
+					</div>
+				</div>
+				<div class="col-md-7">
+					<p class="row_content1">Srimaan Trust founded by the Acharya of Vedic lineage, Sri Parasara Badri Narayana Bhattar Swamy, is a mission established to promote the standard of living of the society.<br><br>
+						With caste, creed, sex and age no bar it serves the needy especially the younger generation to live a peaceful content life by mutual understanding and helps.<br><br>
+						The whole Universe is supported and permeated by the Supreme Lord. Everything in this universe is part of His divine body. Serving any being becomes His service. Realizing this fact is  spirituality.  Spirituality teaches us to be selfless and rekindles love in our hearts. This love  pushes us to action in serving the society selflessly.<br><br>
+						Srimaan Trust is a charitable organization. It aims to aid the economically downtrodden people of our society. It aspires to see a ray of hope and confidence on the faces of people who think they have no future on this planet. Innovative and novel means are adopted to reach the poor and help them in times of need.<br><br>
+
+					</p>
+				</div>
+				<div class="col-md-12">
+					<p class="row_content1" style="padding-left:90px">
+						In today's fast moving world, everyone forced to act just like machine and living with so many tensions and worries.<br><br>
+							To forget the above and look after how our ancestors live without any tension or worries, just spare your precious time to view the oncoming slides fully deviated from modern polluted world.Surely you will get pleasure and inputs to live like our ancestor in our precious life. Your need is very essential for us.
+					</p>
+				</div>
+			</div>
+				</div>
+
+		<!--CURRENT PROJECT-->
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/jquery.touchswipe.min.js"></script>
+	<script src="js/bootstrap-touch-slider.js"></script>
+	<script type="text/javascript">
+	</script>
+{% endblock aboutus %}

@@ -1,0 +1,18 @@
+<html>
+   <body>
+
+      <!-- {% if saved %}
+         <strong>Your profile was saved.</strong>
+      {% endif %}
+
+      {% if not saved %}
+         <strong>Your profile was not saved.</strong>
+      {% endif %} -->
+      <form method="POST" action={% url 'adup' %}>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit", value="upload image" />
+      </form>
+
+   </body>
+</html>

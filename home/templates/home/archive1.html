@@ -1,0 +1,120 @@
+{% extends "home/archives.html" %}
+{% block content %}
+<div class="container-fluid">
+
+                                <div class='col-md-12'>
+                                                <!-- <h2 class="right Bree" style="color: #0E68AA">GURUKULAM</h2> -->
+<div class="row">
+<form id="search" role="form" style="border:0" action="{% url 'archives' %}" method='POST'>
+{% csrf_token %}
+<div class="col-md-3">
+<ul class="nav nav-stacked">
+<li><strong>From Date</strong></li>
+<li>
+<input type="date" name="from" class="form-control" value="" size="10" required id="dateFrom" />
+</li>
+</ul>
+</div>
+
+<div class="col-md-3">
+<ul class="nav nav-stacked">
+<li><strong>To Date</strong></li>
+<li>
+<input type="date" name="to" class="form-control" value="" required size="10" id="dateTo" />
+</li>
+</ul>
+</div>
+
+<div class="col-md-1">
+<ul class="nav nav-stacked">
+<li>&nbsp;</li>
+<li>
+<button class="btn btn-primary" type="submit" id="getJsonSrc">Search</button>
+</li>
+</ul>
+</div>
+</form>
+<form id="key" role="form" style="border:0" action ="{% url 'archivesearch' %}" method='POST'>
+{% csrf_token %}
+<div class="col-md-3">
+<ul class="nav nav-stacked">
+  <li><strong>TITLE</strong></li>
+  <li>
+<input type="text" name="key" placeholder="enter the title" class="form-control" value="" size="10" required id='search'/>
+</li>
+</ul></div>
+<div class="col-md-2">
+<ul class="nav nav-stacked">
+<li>&nbsp;</li>
+<li>
+<button class="btn btn-primary" type="submit" id="getJsonSrc">Search</button>
+</li>
+</ul>
+</div>
+</form>
+</div>
+
+
+
+
+  </div>
+
+<!-- Row -->
+
+</div>
+<br>
+
+
+
+                {% load tags %}
+
+                  {% for content in file_content %}
+
+
+                <div class="row">
+                    <div class="col-md-1 ">
+                    </div>
+                    <div class="col-md-1">
+                        <div class="card" style="width:90px;height:50px;background-color:#337ab7;";>
+                            <p class="abc"><b><h4><center> Events</center></h4> </b></p>
+                            <div class="card-body" style="width:90px;height:50px;background-color:white";>
+                                <p class="card-text"><center><h4><b>{{forloop.counter0|updated_on}}</b></h4></center></p>
+                                <p class="card-text"><center><h4></h4></center></p>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div clas="col-md-10">
+
+                        <h2>{{ forloop.counter0|title }}</h2>
+
+
+                    </div>
+                  </div>
+
+                  <br>
+                  <br>
+                  <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="container_slider row" style="">
+                                <div class="container_wrapper">
+                            {% img forloop.counter0 r4 as object %}
+                                    {% for data in object %}
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <img class="scroll_image" style="padding-left:15px;" alt='helo' src="{{ data.img.url }}" onclick="window.open(this.src);">
+                                            </div>
+                                            <!-- <div class="card-footer"> -->
+                                                <!-- <p class="BgOrange pull-left F15 scroll_footer">{{ content.content }}</p> -->
+                                            <!-- </div> -->
+
+                                        </div>
+                                    {% endfor %}
+                                  </div>
+                                          <br>
+                            </div>
+                        {{ content.text | safe }}
+                     </div>
+                   </div>
+               {% endfor %}
+              </div>
+  {% endblock %}

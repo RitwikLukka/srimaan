@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		{% load staticfiles %}
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Srimaan trust</title>
+
+		<link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'home/css/framework.css' %}" />
+		<link rel="stylesheet" href="{% static 'home/css/custom.css' %}" />
+		<link rel="stylesheet" href="{% static 'home/css/utils.css' %}">
+		<link rel="stylesheet" href="{% static 'home/css/fontawesome.css' %}" />
+        <link rel="stylesheet" href="{% static 'home/FontAwesome/css/font-awesome.css' %}"/>
+		<link rel="shortcut icon" href="{% static 'home/img/srimaanico.png' %}"/>
+		<link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree|Bree+Serif|Catamaran|Exo|Antic+Slab|Lato|Cookie" rel="stylesheet">
+        <link href="{% static 'home/css/animate.min.css' %}" rel="stylesheet" media="all">
+        <link href="{% static 'home/css/bootstrap-touch-slider.css' %}" rel="stylesheet" media="all">
+
+	<style>
+		.dropdown-menu li, .dropdown-menu li a {
+			float: right;
+			white-space: normal;
+			width: 100%;
+			height: auto;
+			word-wrap: break-word;
+			background-color: #F77C2D;
+		}
+		.dropdown-submenu {
+			position: relative;
+		}
+		 .dropdown-submenu>.dropdown-menu {
+			top: 0;
+			left: 100%;
+			margin-top: -1px;
+		}
+		.dropdown-submenu>.dropdown-menu {
+		    top: 0;
+		    left: 100%;
+		    margin-top: -6px;
+		    margin-left: -1px;
+		    -webkit-border-radius: 0 6px 6px 6px;
+		    -moz-border-radius: 0 6px 6px;
+		    border-radius: 0 6px 6px 6px;
+		}
+
+		.dropdown-submenu:hover>.dropdown-menu {
+		    display: block;
+		}
+	.dropdown-submenu:hover>a:after {
+		    border-left-color: #fff;
+		}
+
+		.dropdown-submenu.pull-left {
+		    float: none;
+		}
+
+		.dropdown-submenu.pull-left>.dropdown-menu {
+		    left: -100%;
+		    margin-left: 10px;
+		    -webkit-border-radius: 6px 0 6px 6px;
+		    -moz-border-radius: 6px 0 6px 6px;
+		    border-radius: 6px 0 6px 6px;
+		}
+
+
+
+		.image-hover:hover{
+			transform: translateY(-10px);
+		}
+		.image_position{
+			height:100px;
+			padding-left:50px
+		}
+		.image_content{
+			font-weight:Bold;
+			font-size:14px;
+			width:100%
+		}
+		.read_more{
+			font-weight:Bold;
+			cursor:pointer
+		}
+		.required_field::before{
+			content: "*";
+			color: red;
+		}
+		.item-1,
+		.item-2,
+		.item-3 {
+			position: absolute;
+			display: block;
+			width: 75%;
+			font-size: 25px;
+			animation-duration: 20s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		.item-1{
+			animation-name: anim-1;
+		}
+
+		.item-2{
+			animation-name: anim-2;
+		}
+
+		.item-3{
+			animation-name: anim-3;
+		}
+
+		@keyframes anim-1 {
+			0%, 8.3% { left: 30%; opacity: 0; }
+			8.3%,25% { left: 10%; opacity: 1; }
+			33.33%, 100% { left: 20%; opacity: 0; }
+		}
+
+		@keyframes anim-2 {
+			0%, 33.33% { left: 30%; opacity: 0; }
+			41.63%, 58.29% { left: 10%; opacity: 1; }
+			66.66%, 100% { left: 20%; opacity: 0; }
+		}
+
+		@keyframes anim-3 {
+			0%, 66.66% { left: 30%; opacity: 0; }
+			74.96%, 91.62% { left: 10%; opacity: 1; }
+			100% { left: 20%; opacity: 0; }
+		}
+		@media only screen and (max-width: 600px) {
+  			.item-1,.item-2,.item-3 {
+				padding-top: 1em;
+				font-size: 20px;
+			}
+			.style-font{
+				font-size:20px;
+			}
+			.style-font1{
+				font-size:30px;
+			}
+			.mobile-break { display: block; }
+			.mobile-padding { padding-bottom: 20px; }
+		}
+		.centered {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+		}
+.BgWhite{
+	color:#FFF;
+	font-size: 20px;
+}
+	</style>
+
+	</head>
+<body class="BGbody" >
+    <div class="container-fluid">
+		<div class="row RibbonGrey Opac8 Pad5">
+			<div class="col-md-12">
+				<span class="Padded">Call &nbsp; <i class="fa fa-phone"></i>&nbsp;+91 9150403470, 71</span>
+				<span class="Padded"> | </span>
+				<span class="Padded"><i class="fa fa-envelope"></i>&nbsp;srimaantrust@gmail.com</span>
+				<span class="Padded"> | </span>
+		    <a href="/home/log/"><span class="Padded"><i class="fa fa-question-circle"></i>&nbsp;Q&A</span></a>
+				<span class="Padded"> | </span>
+				<a href="" data-toggle="modal" data-target="#myModal7" ><span class="Padded"><i class="fa fa-users"></i>&nbsp;Volunteers</span></a>
+				<span class="Padded"> | </span>
+					<a href="" data-toggle="modal" data-target="#myModal1" ><span class="Padded"><i class="fa fa-comment"></i>&nbsp;Feedback</span></a>
+
+				<span class="pull-right">
+					<span class="Padded"><img src="{% static 'home/img/facebook.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/twitter.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/instagram.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/youtube.png' %}" class="H20"/></span>
+					<span class="Padded"><img src="{% static 'home/img/watsapp.png' %}" class="H20"/></span>
+					<span class="Padded"><a href="/home/admin/"><img src="{% static 'home/img/login.png' %}" class="H20"/></a></span>
+					<!-- <a href="/home/admin/"><span class="Padded"><i class="glyphicon glyphicon-user"></i></span></a> -->
+				</span>
+			</div>
+		</div>
+	</div>
+	<nav class="navbar navbar-success SharpBorder BBlue BoxLightShadow">
+		<div class="container-fluid custom_navbar">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header ">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span><img src="{% static 'home/img/srimaanico.png' %}" class="pull-left Pad5" style="width:50px;"/><a class="navbar-brand White Bree" href="{%url 'index' %}">SRIMAAN TRUST</a></span>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="nodropdown"><a href="{% url 'donate'%}"><img src="{% static 'home/img/donate.png' %}" class="H30"/>&nbsp;DONATE</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/about.png' %}" class="H30"/>&nbsp;ABOUT US	<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="{% url 'about_trust'%}">Srimaan Trust</a></li>
+							<li><a href="{% url 'about_bhattar'%}">Sri Parasara Badri Narayana Bhattar Swamy</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/social.png' %}" class="H30"/>&nbsp;SOCIAL <span class="caret"></span></a>
+						<ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Education<span></span></a>
+              <ul class="dropdown-menu">
+				       <li><a tabindex="-1" href="{% url "home.views.page" name="8" %}">Residential vedic school (gurukulam) at srirangam</a></li>
+				       <li><a tabindex="-1" href="{% url "home.views.page" name="9" %}">Residential vedic school (gurukulam)  at ayodhya</a></li>
+				     	<li><a tabindex="-1" href="{% url "home.views.page" name="10" %}">Senior gurukulam</a></li>
+					   <li><a tabindex="-1" href="{% url "home.views.page" name="11" %}">International school with culture (acharyah school for leaders)</a></li>
+					   <li><a tabindex="-1" href="{% url "home.views.page" name="12" %}">Part time school </a></li>
+					    <li><a tabindex="-1" href="{% url "home.views.page" name="14" %}">Library</a></li>
+					    <li><a tabindex="-1" href="{% url "home.views.page" name="47" %}">contests</a></li>
+					   <li><a tabindex="-1" href="{% url "home.views.page" name="15" %}">Online class-divyaprabandham,vedham,tamil and sanskrit classes</a></li>
+				    	<li><a tabindex="-1" href="{% url "home.views.page" name="16" %}">Teachers and parents workshop</a></li>
+				    	<li><a tabindex="-1" href="{% url "home.views.page" name="13" %}">camps</a></li>
+					   <li><a tabindex="-1" href="{% url "home.views.page" name="17" %}">Life work shop</a></li>
+				   	<li><a tabindex="-1" href="{% url "home.views.page" name="18" %}">Educating village children</a></li>
+					   <li><a tabindex="-1" href="{% url "home.views.page" name="19" %}">Skills development</a></li>
+					   <li><a tabindex="-1" href="{% url "home.views.page" name="20" %}">Arts and fine arts</a></li>
+
+					</ul>
+        </li>
+
+				<li class="dropdown-submenu">
+				<a class="test" tabindex="-1" href="#">Health care<span></span></a>
+          <ul class="dropdown-menu">
+				 <li><a tabindex="-1" href={% url 'home.views.page' name="1" %}>Health camp</a></li>
+				 <li><a tabindex="-1" href="{% url "home.views.page" name="2" %}">Medical Aid</a></li>
+				<li><a tabindex="-1" href="{% url "home.views.page" name="3" %}">Yoga camp</a></li>
+			</ul>
+		</li>
+
+
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Environmental protection<span></span></a>
+								<ul class="dropdown-menu">
+							 <li><a tabindex="-1" href="{% url "home.views.page" name="21" %}">Goshalai</a></li>
+							 <li><a tabindex="-1" href="{% url "home.views.page" name="22" %}">Cauvery cleaning</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="23" %}">Planting trees</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="24" %}">Awareness programme</a></li>
+							</ul>
+							</li>
+
+
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Food<span></span></a>
+								<ul class="dropdown-menu">
+							 <li><a tabindex="-1" href="{% url "home.views.page" name="4" %}">Annadhanam</a></li>
+							 <li><a tabindex="-1" href="{% url "home.views.page" name="5" %}">Free food at srirangam</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="6" %}">Provision for needy</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="7" %}">Organic farming</a></li>
+							</ul>
+							</li>
+
+							<li><a href="{% url "home.views.jbs1" %}">Jobs</a></li>
+
+							<li class="dropdown-submenu">
+							<a class="test" tabindex="-1" href="#">Other services<span></span></a>
+								<ul class="dropdown-menu">
+							 <li><a tabindex="-1" href="{% url "home.views.page" name="36" %}">Old age home</a></li>
+							 <li><a tabindex="-1" href="{% url "home.views.page" name="37" %}">Free stay at srirangam infotech</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="38" %}">Clothes for needy</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="39" %}">Edu tours</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="40" %}">Exihibitions</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="41" %}">Marriage help</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="42" %}">Dharma upanayanam</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="43" %}">Divine discourses</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="44" %}">Honouring scholars</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="45" %}">Propagation of culture</a></li>
+							<li><a tabindex="-1" href="{% url "home.views.page" name="46" %}">Women empowerment</a></li>
+							</ul>
+							</li>
+
+					</ul>
+
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/spritual.png' %}" class="H30"/>&nbsp;SPIRITUAL <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="{% url "home.views.page" name="25" %}">Conservation of Indian Heritage</a></li>
+							<li><a href="{% url "home.views.page" name="26" %}">Nithya Homams</a></li>
+							<li><a href="{% url "home.views.page" name="27" %}">We Pray For You</a></li>
+							<li><a href="{% url "home.views.page" name="28" %}">Veedhi Pradhakshinams</a></li>
+							<li><a href="{% url "home.views.page" name="29" %}">Parayanams</a></li>
+							<li><a href="{% url "home.views.page" name="30" %}">Archanas</a></li>
+							<li><a href="{% url "home.views.page" name="31" %}">Gramam Thorum Ramanujar</a></li>
+							<li><a href="{% url "home.views.page" name="32" %}">Temple Services - Temple Cleaning Parayanams</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'home/img/subscribe1.png' %}" class="H30"/>&nbsp;GAMES/PUBLICATION<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="{% url "home.views.page" name="33" %}">Games</a></li>
+							<li><a href="{% url "home.views.page" name="34" %}">Kainkaryam book subscription</a></li>
+							<li><a href="{% url "home.views.page" name="35" %}">Srimaan info diary</a></li>
+						</ul>
+
+					</li>
+					<li class="nodropdown"><a href="#"  data-toggle="modal" data-target="#myModal5"><img src="{% static 'home/img/online.png' %}" class="H30"/>&nbsp;ONLINE COURSES</a></li>
+					<li class="nodropdown"><a href="#"><img src="{% static 'home/img/archive.png' %}" class="H30"/>&nbsp;ARCHIVES</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="col-md-2 col-md-offset-5 panel pull-right" style="margin-top:-15px;display:none;" id="navforms">
+		<form class="navbar-form navbar-right" action="" method="POST" style="margin-top:15px;" role="search">  <!--Hardcoded Margin-->
+			<div class="input-group stylish-input-group">
+				<input type="text" class="form-control input-sm"  placeholder="Search" >
+				<span class="input-group-addon">
+					<button type="submit" >
+						<span class="glyphicon glyphicon-search F10"></span>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<div id="bootstrap-touch-slider" class="carousel bs-slider fade BoxShadow control-round indicators-line H350" data-ride="carousel" data-pause="hover" data-interval="true" >
+					<!-- Indicators -->
+					<div class="carousel-inner " role="listbox">
+
+                                                                                                {% for image in r1c1.all %}
+                                                                                                <!-- <div class="item  carousel_test active" id="number" name="number"> -->
+                                                                                                                <!-- <p style="color:#FFF">{{ image.id }}</p> -->
+                                                                                                                {% if forloop.counter == 1 %}
+
+                                                                                                                <div class="item active">
+                                                                                                                                 {% else %}
+                                                                                                                <div class="item">
+                                                                                                                                                                <p style="color:#FFF"></p>
+                                                                                                                {% endif %}
+                                                                                                                                <img src="{{ image.image.url }}" alt="Bootstrap Touch Slider"  class="slide-image"/>
+                                                                                                                                <div class="bs-slider-overlay"></div>
+                                                                                                                                <div class="slide-text slide_style_left">
+                                                                                                                                                <br><br>
+                                                                                                                                                                <h5 data-animation="animated flipInX" class="Bree">November <strong>23rd</strong></h5><br><br>
+                                                                                                                                                                <p class="F15 Exo" data-animation="animated fadeInRight">Srimaan Bhattor Gurukulam Karthikai Deepam Celebration</p>
+                                                                                                                                                                <p class="F11 Catamaran" data-animation="animated fadeInDown"><a href="#">Read More..</a></p>
+                                                                                                                                                </div>
+                                                                                                </div>
+                                                                                                {% endfor %}
+                                                                                                <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+                                                                                                                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                                                                                                                <span class="sr-only">Previous</span>
+                                                                                                </a>
+                                                                                                <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+                                                                                                                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                                                                                                                <span class="sr-only">Next</span>
+                                                                                                </a>
+                                                                                </div> <!-- End  bootstrap-touch-slider Slider -->
+                                                                                </div>
+ <!-- End  bootstrap-touch-slider Slider -->
+			</div>
+			<!--SECOND Div EVENTS-->
+			<div class="col-md-3 Bree " id="events">
+				<h4 class="OrangeWhite text-center Pad5">UPCOMING EVENTS</h4>
+				{% for contents in r1c2.all %}
+					<div><img src="{% static 'home/img/li.png' %}" class="H20"/>&nbsp;{{ contents.event_date }} - {{ contents.content }}</div>
+				{% endfor %}
+				<br>
+				<!-- <div><img src="{% static 'home/img/li.png' %}" class="H20"/>&nbsp;Dec 16th - Winter Camp</div> -->
+				<!-- <div><img src="{% static 'home/img/li.png' %}" class="H20"/>&nbsp;Dec 20th - Srimaan Info Diary</div><br> -->
+				<!-- <div><img src="{% static 'home/img/li.png' %}" class="H20"/>&nbsp;Dec 23rd - Shri Jayanthi at Goshala</div> -->
+				<!-- <div><img src="{% static 'home/img/li.png' %}" class="H20"/>&nbsp;Dec 30th - Dhanurmasam Celebrations</div> -->
+				<img src="{% static 'home/trust_images/future_campus.jpg' %}" class="BoxLightShadow" style="width:100%;height:140px;cursor: pointer;"/><br><br>
+			</div>
+
+			<!--Third Div-->
+			<div class="col-md-3 Bree " id="">
+				<div class='col-md-12 '>
+					{% for text in r1c3a.all %}
+						<p class="item-{{ text.id }}"><img src="{{ text.image.url }}" style="width:40px;height:50px;" />&nbsp;{{ text.content }}<br><a href='#' style='font-size:17px;'>Read More&hellip;</a></p>
+						<!-- <p class="item-2"><img src="{% static 'home/trust_images/pray.png' %}"  style="width:35px;height:50px;"/>&nbsp;We Pray For You<br><a href='#' style='font-size:17px;'>Read More&hellip;</a></p> -->
+						<!-- <p class="item-3"><img src="{% static 'home/trust_images/stay.png' %}"  style="width:50px;height:50px;"/>&nbsp;Free Stay<br><a href='#' style='font-size:17px;'>Read More&hellip;</a></p> -->
+
+
+					{% endfor %}
+				</div><br><br><br><br><br>
+				<div>
+					<img src="{% static 'home/img/bg.jpg' %}" class="BoxLightShadow" style="width:100%;height: 180px;"/><center><div class="centered" style="font-family: 'Cookie', cursive;font-size: 30px;cursor: pointer;"><br><img src ="{% static 'home/trust_images/peerumal1.jpg'  %}" style="height:60px" ><a href="{% url 'home.views.thanks' %}">Thanking The Donors</a></div></center><br>
+				</div>
+				<div class="col-md-12">
+					<label class="pull-right"><p class="blink-two pointer F15" ><a href="" style="color:#FF0000;" data-toggle="modal" data-target="#myModal" >Why? Thulasi Pooja, Ekadasi Viradam!! &nbsp;</a></p></label>
+					<label class="pull-right"><p class="blink-two pointer F15" ><a href="#current_project" style="color:#0E68AA;">Upcoming Projects !! &nbsp;</a></p></label>
+				</div>
+						<!-- <div>  -->
+					 <!-- <ul style="list-style-type:none">
+						<li style="background: #37BC9B;color: #000;cursor:pointer;counter-increment: myCounter;margin: 0 0 0 0;position: relative;top: 1em;border-radius:  0em 2px 1em 1em; padding-left: 2em; font-size: 1.2em; font-family: Constantia;">Free Food</li><br>
+						<li style="background: #37BC9B;color: #000;cursor:pointer;counter-increment: myCounter;margin: 0 0 0 0;position: relative;top: 1em;border-radius:  0em 2px 1em 1em; padding-left: 2em; font-size: 1.2em; font-family: Constantia;">Free Stay</li><br>
+						<li style="background: #37BC9B;color: #000;cursor:pointer;counter-increment: myCounter;margin: 0 0 0 0;position: relative;top: 1em;border-radius:  0em 2px 1em 1em; padding-left: 2em; font-size: 1.2em; font-family: Constantia;">We Pray For You</li><br>
+						<li style="background: #37BC9B;color: #000;cursor:pointer;counter-increment: myCounter;margin: 0 0 0 0;position: relative;top: 1em;border-radius:  0em 2px 1em 1em; padding-left: 2em; font-size: 1.2em; font-family: Constantia;">Games And Publication</li><br>
+						<li style="background: #37BC9B;color: #000;cursor:pointer;counter-increment: myCounter;margin: 0 0 0 0;position: relative;top: 1em;border-radius:  0em 2px 1em 1em; padding-left: 2em; font-size: 1.2em; font-family: Constantia;">Thanking The donors</li><br>
+					</ul>
+					<img src="{% static 'home/img/thulasi.jpg' %}" class="H1" style="width:100%"/>
+					<label class="pull-right"><p class="blink-two pointer F15" ><a href="" style="color:#FF0000;" data-toggle="modal" data-target="#myModal" >Why? Thulasi Pooja, Ekadasi Viradam!! &nbsp;</a></p></label>
+				</div> -->
+
+			</div>
+
+		</div>
+		<!-- Modal Content -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Please Enter the Details</h4>
+				</div>
+				<div class="modal-body">
+					<form  action="#" method="POST">
+						Name:<input type="text" class="form-control required_field" placeholder="Enter your name" required/><br>
+						Email:<input type="text" class="form-control required_field" placeholder="Enter your email id" required/><br>
+						Phone No (Optional):<input type="text" class="form-control" placeholder="Enter your Phone no"/><br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success btn-sm">Get Answer</button>
+					</form>
+
+				</div>
+				</div>
+			</div>
+		</div>
+ <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Feedback</h4>
+				</div>
+				<div class="modal-body">
+						<form action ="/home/fb/"  method = "POST">{% csrf_token %}
+						Name:<input type="text" name="name" class="form-control required_field" placeholder="Enter your name" required/><br>
+						City:<input type="text" name="city" class="form-control required_field" placeholder="Enter your city" required/><br>
+
+						Your Feedbacks Here:<textarea rows="5" cols="50" class="form-control required_field" name="feedback" placeholder="Enter your feedback" maxlength="300" required/></textarea><br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success btn-sm">Feedbacks are welcome</button>
+					</form>
+
+				</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">volunteers</h4>
+				</div>
+				<div class="modal-body">
+						<form action ="/home/fb/"  method = "POST">{% csrf_token %}
+						Name:<input type="text" name="name" class="form-control required_field" placeholder="Enter your name" required/><br>
+						Phone no:<input type="text" name="city" class="form-control required_field" placeholder="Enter your Phone number" required/><br>
+
+						Address:<textarea rows="5" cols="50" class="form-control required_field" name="feedback" placeholder="Enter your address" maxlength="300" required/></textarea><br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-success btn-sm">submit</button>
+					</form>
+
+				</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+																		<div class="modal-dialog" role="document">
+																										<div class="modal-content">
+																										<div class="modal-header">
+																																		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																																		<h4 class="modal-title" id="myModalLabel">Please Enter the Details</h4>
+																										</div>
+																										<div class="modal-body">
+																																		<form  action="/home/courses/" method="POST">{% csrf_token %}
+																																										First Name:<input type="text" name="firstname" class="form-control required_field" placeholder="Enter your first name" required/><br>
+																																										Last Name:<input type="text" name="lastname" class="form-control required_field" placeholder="Enter your last name" required/><br>
+																																										Gender:<input type="radio" name="gender" value="male"  checked > Male
+																					<input type="radio" name="gender" value="female" > Female<br><br>
+																																										Email Address:<input type="email"   class="form-control required_field" name="email_address"  placeholder="enter your Email Address" required/><br>
+																																										Education Qualification:<input type="text" class="form-control required_field" name="education_qualification" placeholder="Enter your education details" required/><br>
+																																										Courses Offered:<select name="course" id="ed" required><option value="1">course1</option>
+																																										<option value="2">course2</option>
+																																										<option value="3">course3</option>
+																																										<option value="4">course4</option>
+																																		</select><br><br>
+																																										Contact Number:<input type="text"  name="contact_number" class="form-control required_field" placeholder="Enter your 10 digit Nunber" required/><br>
+																																										Residential Address:<br><textarea rows="5" cols="50" class="form-control required_field" name="residential_address" placeholder="Enter your Address" maxlength="300" required/></textarea><br>
+
+
+
+
+																										</div>
+																										<div class="modal-footer">
+																																		<button type="button" class="btn btn-warning btn-sm pull-left" data-dismiss="modal">Close</button>
+																																		<button type="submit" class="btn btn-success btn-sm">Submit</button>
+																																		</form>
+
+																										</div>
+																										</div>
+																		</div>
+										</div>
+
+		<!-- Second Row -->
+		<div class="row">
+			<hr class="line-type-4">
+			<div class="text-center" style="">
+				<!-- <h1 class="F30 AnticSlab" >Few More Utilities</h1>	 -->
+				<!-- <hr class="line-type-3"> -->
+				<!-- <div class="col-md-10 col-md-offset-1" > -->
+					 <div class="col-md-12 " >
+						{% for content in r2.all %}
+						<div class="col-md-2 image-hover mobile-padding" >
+							<p class="BgWhite pull-left F15 label_footer Bree" style='margin-bottom: -1px'>{{ content.content }}</p>
+							<a href="{{ content.links }}"><img height="100%" width="100%" src="{{ content.image.url }}"></a>
+						</div>
+						{% endfor %}
+						<!-- <div class="col-md-2 image-hover" >
+							<p class="BgOrange pull-left F15 scroll_footer Bree" style='margin-bottom: -1px'>Gurukulam</p>
+							<img height="177px" width="100%" src="{% static 'home/trust_images/gurukulam1.png' %}">
+						</div>
+						<div class="col-md-2 image-hover" >
+							<p class="BgOrange pull-left F15 scroll_footer Bree" style='margin-bottom: -1px'>Karpikum Kainkaryam</p>
+							<img height="177px" width="100%" src="{% static 'home/trust_images/kainkaryam1.png' %}">
+						</div>
+						<div class="col-md-2 image-hover" >
+							<p class="BgOrange pull-left F15 scroll_footer Bree">Sanadhana Dharmam</p>
+							<img height="176px" width="100%" src="{% static 'home/trust_images/sanadhana_dharma1.png' %}">
+						</div>
+						<div class="col-md-2 image-hover" >
+							<p class="BgOrange pull-left F15 scroll_footer Bree" style='margin-bottom: -3px'>Scholarship</p>
+							<img height="175px" width="100%" src="{% static 'home/trust_images/scholarship1.png' %}">
+						</div>
+						<div class="col-md-2 image-hover" >
+								<p class="BgOrange pull-left F15 scroll_footer Bree" style='margin-bottom: -3px'>Sri Gynanapiran Library</p>
+							<img height="174px" width="100%" src="{% static 'home/trust_images/library1.png' %}">
+						</div> -->
+					 </div>
+
+				<!-- </div> -->
+			</div>
+		</div>
+		<br>
+		<hr class="line-type-4">
+		<div class="row">
+			{% for content in r3.all %}
+			<div class="col-md-4">
+				<br>
+				<span class="BgOrange Bree">{{ content.content }}<span>
+				<div>
+					<iframe class="iframe" src="{{ content.links }}"></iframe>
+					<div class="OrangeWhite">{{ content.content }}</div>
+				</div>
+			</div>
+			{% endfor %}
+			<!-- <div class="col-md-4">
+				<br>
+				<span class="BgOrange Bree">VOLUNTEER SPEAKS<span>
+				<div>
+					<iframe class="iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
+					<div class="OrangeWhite">VOLUNTEER SPEAKS</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<br>
+				<span class="BgOrange Bree">WOMEN HEALTH CARE<span>
+				<div>
+					<iframe class="iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"></iframe>
+					<div class="OrangeWhite">WOMEN HEALTH CARE</div>
+				</div>
+			</div> -->
+			<br>
+		</div>
+		<br>
+		<hr class="line-type-4">
+		<div class="text-center H50">
+			<span class="F30 AnticSlab style-font">Here is a glimpse of what we do. It’s only the tip of the iceberg!!</span>
+		</div>
+		<hr class="line-type-3">
+		<br>
+		<div class="container_slider row" style="">
+            <div class="container_wrapper">
+				{% for content in r4.all %}
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="scroll_image" src="{{ content.image.url }}">
+                            </div>
+                            <div class="card-footer">
+                                <p class="pull-left F15 scroll_footer BgWhite">{{ content.year }}</p>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				{% endfor %}
+                <!-- <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+								<img class="scroll_image" src="{% static 'home/trust_images/3.jpg' %}">
+                            </div>
+                            <div class="card-footer">
+                                <p class="BgOrange pull-left F15 scroll_footer">Content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+						<div class="card">
+							<div class="card-body">
+								<img class="scroll_image" src="{% static 'home/images/slide3.jpeg' %}">
+							</div>
+							<div class="card-footer">
+								<p class="BgOrange pull-left F15 scroll_footer">Content</p>
+							</div>
+						</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+							<div class="card-body">
+								<img class="scroll_image" src="{% static 'home/images/slide2.jpeg' %}">
+                            </div>
+                            <div class="card-footer">
+								<p class="BgOrange pull-left F15 scroll_footer">Content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+							<div class="card-body">
+								<img class="scroll_image" src="{% static 'home/images/slide1.jpeg' %}">
+                            </div>
+                            <div class="card-footer">
+								<p class="BgOrange pull-left F15 scroll_footer">Content</p>
+                             </div>
+						</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+							<div class="card-body">
+								<img class="scroll_image" src="{% static 'home/trust_images/3.jpg' %}">
+                            </div>
+                            <div class="card-footer">
+								<p class="BgOrange pull-left F15 scroll_footer">Content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+								<img class="scroll_image" src="{% static 'home/trust_images/3.jpg' %}">
+                            </div>
+                            <div class="card-footer">
+                                <p class="BgOrange pull-left F15 scroll_footer">Content</p>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+                        <div class="card">
+                            <div class="card-body">
+								<img class="scroll_image" src="{% static 'home/trust_images/3.jpg' %}">
+							</div>
+                            <div class="card-footer">
+								<p class="BgOrange pull-left F15 scroll_footer">Content</p>
+                            </div>
+						</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="">
+						<div class="card">
+							<div class="card-body">
+								<img class="scroll_image" src="{% static 'home/trust_images/3.jpg' %}">
+							</div>
+							<div class="card-footer">
+								<p class="BgOrange pull-left F15 scroll_footer">Content</p>
+							</div>
+                        </div>
+                    </div>
+                </div>                                                    -->
+            </div>
+		</div>
+		<hr class="line-type-4">
+		<div class="row" id="current_project">
+			<div class="text-center H50">
+				<span class="F30 AnticSlab style-font1">Our Upcoming Projects</span>
+			</div>
+			<hr class="line-type-3">
+			<div class="col-md-10 col-md-offset-1">
+				<div class="col-md-3">
+					<img src="{% static 'home/img/ayurvedic.png' %}" class="image_position"><br><br>
+					<span class="Bree Blue image_content" style="padding-right:50px">Centre for Yoga & Ayurvedha</span>
+					<br class="mobile-break">
+					<span class="read_more" onclick="$('#read_more1').toggle();">Read More&hellip;</span>
+					<div id="read_more1" style="display:none;">Test</div>
+				</div>
+				<div class="col-md-3">
+					<img src="{% static 'home/img/school.png' %}" class="image_position"><br><br>
+					<span class="Bree Blue image_content" style="padding-left:40px">Centre for Education</span><br>
+					<span class="read_more" style="padding-left:40px;" onclick="$('#read_more2').toggle();">Read More&hellip;</span>
+					<div id="read_more2" style="display:none;">Test</div>
+				</div>
+				<div class="col-md-3">
+					<img src="{% static 'home/img/health.png' %}" class="image_position"><br><br>
+					<span class="Bree Blue image_content" style="padding-left:30px">Centre For Health Care</span><br>
+					<span class="read_more" style="padding-left:30px" onclick="$('#read_more3').toggle();" >Read More&hellip;</span>
+					<div id="read_more3" style="display:none;">Test</div>
+				</div>
+				<div class="col-md-3">
+					<img src="{% static 'home/img/employee.png' %}" class="image_position"><br><br>
+					<span class="Bree Blue image_content" style="padding-right:50px">Training and employment for Physically Challenged</span><br>
+					<span class="read_more" onclick="$('#read_more4').toggle();">Read More&hellip;</span>
+					<div id="read_more4" style="display:none;">Test</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<!-- QUOTES SECTION -->
+		<div class="row">
+			<div class='col-md-offset-2 col-md-8 text-center'>
+				<h2>SRIMAAN TRUST - A BEACON OF LIGHT IN MANY A LIFE</h2>
+			</div>
+		</div>
+		<div class="row" style="height:200px;overflow-y:hidden;">
+			<div class='col-md-offset-2 col-md-8'>
+				<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+					<!-- Bottom Carousel Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#quote-carousel" data-slide-to="1"></li>
+						<li data-target="#quote-carousel" data-slide-to="2"></li>
+					</ol>
+					<!-- Carousel Slides / Quotes -->
+					<div class="carousel-inner">
+						<!-- Quote 1 -->
+						<div class="item active">
+							<blockquote>
+								<div class="row" style="padding-left:20px;">
+									<div class="col-sm-12">
+										<p>{{data.0.feedback}}</p>
+										<small class="pull-right">{{data.0.name}}, {{data.0.city}}</small>
+									</div>
+								</div>
+							</blockquote>
+						</div>
+						<!-- Quote 2 -->
+						<div class="item">
+							<blockquote>
+								<div class="row" style="padding-left:20px;">
+									<div class="col-sm-12" >
+										<p>{{data.1.feedback}}</p>
+										<small class="pull-right">{{data.1.name}}, {{data.1.city}}</small>
+									</div>
+								</div>
+							</blockquote>
+						</div>
+						<!-- Quote 3 -->
+						<div class="item">
+							<blockquote>
+								<div class="row" style="padding-left:20px;">
+									<div class="col-sm-12">
+										<p>{{data.2.feedback}}</p>
+											<small class="pull-right">{{data.2.name}}, {{data.2.city}}</small>
+									</div>
+								</div>
+							</blockquote>
+						</div>
+					</div>
+					<!-- Carousel Buttons Next/Prev -->
+					<a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+					<a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<!--CURRENT PROJECT-->
+		<div class="row BoxLightShadow" style="margin-top:30px;background-color:#485665;">
+			<div class="col-md-12 Footer" style="margin:30px 0px 30px 0px;">
+				<div class="col-md-3">
+					<h4 class="FontOrange">CONNECT</h4>
+					<p>Feedback</p>
+					<p>Subscribe</p>
+					<hr>
+					<p><img src="{% static 'home/img/donation.png' %}" class="H50"/></p><br>
+					<p><img src="{% static 'home/img/volunteer.png' %}" class="H70"/></p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="FontOrange">MAKE A GIFT</h4>
+					<p>Asrams            </p>
+					<p>Temples           </p>
+					<p>For Blind         </p>
+					<p>Vedic Schools     </p>
+					<p>Protect Cows      </p>
+					<p>Tribal Schools    </p>
+					<p>Jims Hospital     </p>
+					<p>Relief Activities </p>
+					<p>Service Activities</p>
+					<p>Statue Of Equality</p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="FontOrange">LATEST DONATION ITEMS</h4>
+					<p>Make Yourself Lucky</p>
+					<p>Mineral Water Plant</p>
+					<p>Beersaipet Gurukulam Reconstruction</p>
+					<p>Tadiyaradhana Hall @ JIVA</p>
+					<p>Bhakthinivedana</p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="FontOrange">CONTACT US</h4>
+					<p>Srimaan Trust,<br>#231, South Uthara Street, Srirangam, Tiruchirappalli, Tamil Nadu 620006</p>
+					<p>Contact: 0431 243 1109</p>
+					<p>E-mail: srimaantrust@gmail.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="row BoxLightShadow Pad10 White" style="background-color:#282A2B;" >
+			<center>Copyright 2018 @ srimaantrust.com | All Rights Reserved</center>
+		</div>
+	</div>
+	<script src="{% static 'home/js/jquery.min.js' %}"></script>
+	<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'home/js/custom.js' %}"></script>
+	<script src="{% static 'home/js/jquery.touchswipe.min.js' %}"></script>
+	<script src="{% static 'home/js/bootstrap-touch-slider.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/marquee/jquery.easing.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/marquee/jquery.easy-ticker.js' %}"></script>
+	<script type="text/javascript">
+		$('#bootstrap-touch-slider').bsTouchSlider();
+
+		/*Quotes*/
+		function initQuoteCarousel(){
+			var $quotesWrapper = $(".cust-quotes");
+			var $quotes = $quotesWrapper.find("blockquote");
+			if (!$quotes.length) {
+				return;
+			}
+		    var selectNextQuote = function () {
+				// keep move first quote in dom to the end to make continous
+				var $quote = $quotesWrapper.find("blockquote:first").detach().appendTo($quotesWrapper);
+				setTimeout(selectNextQuote, $quote.data("timeout"));
+			};
+			setTimeout(selectNextQuote, $quotes.filter(":first").data("timeout"));
+		}
+		$(function () {
+			initQuoteCarousel();
+		});
+
+
+
+
+
+	</script>
+</body>
+</html>

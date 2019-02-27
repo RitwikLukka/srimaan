@@ -1,0 +1,66 @@
+
+.navbar-success .navbar-nav > li.dropdown:hover > a, 
+.navbar-success .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-success .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: #F77C2D;
+    color:#FFF;
+	font-weight:bold;
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+.navbar-success .navbar-nav > li.nodropdown:hover > a{
+	 background-color: #F77C2D;
+    color:#FFF;
+	font-weight:bold;
+	text-shadow: 4px 4px 1px grey;
+}
+.nav li dropdown,.nav li nodropdown {
+	color:#FFF;
+	font-weight:bold;
+	font-size:13px;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+	.container-fluid .RibbonGrey{
+		font-size:10px;
+	}
+	#bootstrap-touch-slider{
+		height:200px;
+	}
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.container-fluid .RibbonGrey{
+		font-size:10px;
+	}
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* SLIDER */
